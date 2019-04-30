@@ -1,5 +1,25 @@
 {
-  "name": "TBO",
+  "name": "tbo",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "tbo.jsx",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vutran1412/TBO.git"
+  },
+  "author": "Vu Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vutran1412/TBO/issues"
+  },
+  "homepage": "https://github.com/vutran1412/TBO#readme"
 }
