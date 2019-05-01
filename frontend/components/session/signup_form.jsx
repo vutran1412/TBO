@@ -14,7 +14,6 @@ class SignUpForm extends React.Component {
     }
 
     update(field) {
-        // debugger
         return e => this.setState({
             [field]: e.currentTarget.value
         })
@@ -26,10 +25,23 @@ class SignUpForm extends React.Component {
         this.props.signUp(user)
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
     render() {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                     <label>First Name
                         <input type="text" value={this.state.firstName} onChange={this.update('first_name')} />
                     </label>
