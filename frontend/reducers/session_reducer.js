@@ -8,11 +8,12 @@ const _nullUser = Object.freeze({
 })
 
 
-export default (oldState = {}, action) => {
+export default (oldState = _nullUser, action) => {
     Object.freeze(oldState)
     switch(action.type) {
         case RECEIVE_CURRENT_USER:
-            return { id: action.currentUser.id }
+            const newState = Object.assign({}, oldState, { id: action.currentUser.id } )
+            return newState
         case LOGOUT_CURRENT_USER:
             return _nullUser
         default:
