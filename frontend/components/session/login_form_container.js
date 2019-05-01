@@ -5,13 +5,12 @@ import { logIn } from '../../actions/session_actions'
 const mapStateToProps = ({ errors }) => (
     {
         errors: errors.session,
-        formType: 'login'
     }
 )
 
 const mapDispatchToProps = dispatch => (
     {
-        processForm: user => dispatch(logIn(user))
+        logIn: user => dispatch(logIn(user))
     }
 )
 
