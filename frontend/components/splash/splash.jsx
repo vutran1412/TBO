@@ -1,13 +1,15 @@
 import React from 'react'
+import LoginFormContainer from '../session/login_form_container'
+import SignUpFormContainer from '../session/signup_form_container'
 import { Link } from 'react-router-dom'
+
 
 const SplashPage = () => (
     <div className="splash-page">
-        <nav className="login-signup">
-            <Link to="/signup">Sign Up</Link>
-            &nbsp; or &nbsp;
-            <Link to="/login">Log In</Link>
-        </nav>
+        <ul className="nav-modal-container">
+            <li><Link to="/signup">Sign Up</Link></li>
+            <li><Link to="/login">Log In</Link></li>
+        </ul>
     </div>
 )
 

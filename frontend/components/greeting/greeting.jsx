@@ -9,8 +9,8 @@ const Greeting = ({ currentUser, logOut }) => {
     )
     const personalGreeting = () => (
         <hgroup className="header-group">
-            
-        <button className="header-button" onClick={logOut}>Log Out</button>
+            <h2>Welcome to TBO, hello {currentUser.first_name}></h2>
+            <button className="header-button" onClick={logOut}>Log Out</button>
         </hgroup>
   )
 
