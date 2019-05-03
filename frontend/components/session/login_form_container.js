@@ -11,8 +11,9 @@ const mapStateToProps = ({ errors }) => (
     }
 )
 
-const mapDispatchToProps = dispatch => (
-    {
+const mapDispatchToProps = dispatch => {
+    // debugger
+    return ({
         logIn: user => dispatch(logIn(user)),
         otherForm: (
             <button className="modal-switch" onClick={() => dispatch(modalOpen('signup'))}>
@@ -20,7 +21,8 @@ const mapDispatchToProps = dispatch => (
             </button>
         ),
         modalClose: () => dispatch(modalClose())
-    }
-)
+
+    })
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm)

@@ -13,7 +13,6 @@ const Greeting = ({ currentUser, logOut, modalOpen }) => {
     )
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <h2>Welcome to TBO, hello {currentUser.firstName}</h2>
             <button className="header-button" onClick={logOut}>Log Out</button>
         </hgroup>
   )

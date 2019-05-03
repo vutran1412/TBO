@@ -21,8 +21,9 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
+        // debugger
         const user = Object.assign({}, this.state)
-        this.props.signUp(user).then(this.props.modalClose())
+        this.props.signUp(user).then(this.props.modalClose)
     }
 
     renderErrors() {
@@ -44,7 +45,9 @@ class SignUpForm extends React.Component {
                     <h1 className="modal-header">Sign Up</h1>
                     <h2 className="modal-sub-header" >Already subscribed? {this.props.otherForm}</h2>
                     <form onSubmit={this.handleSubmit} className="login-form">
-                        {this.renderErrors()}
+                        <div className="errors">
+                            {this.renderErrors()}
+                        </div>
                         <label className="login-label">First Name
                             <input className="login-input" type="text" value={this.state.firstName} onChange={this.update('first_name')} />
                         </label>

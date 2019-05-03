@@ -22,7 +22,7 @@ const Modal = ({ modal, modalClose }) => {
     }
 
     return (
-        <div className="modal-background" onClick={modalClose}>
+        <div className="modal-background">
             <div className="modal-child" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
@@ -38,7 +38,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        modalClose: () => dispatchEvent(modalClose())
+        modalClose: () => dispatch(modalClose())
     }
 }
 

@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
             password: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.renderErrors = this.renderErrors.bind(this)
     }
 
     update(field) {
@@ -20,7 +21,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         const user = Object.assign({}, this.state)
-        this.props.logIn(user).then(this.props.modalClose())
+        this.props.logIn(user).then(this.props.modalClose)
     }
 
     renderErrors() {
@@ -43,7 +44,9 @@ class SessionForm extends React.Component {
                 <h1 className="modal-header">Sign In</h1>
                 <h2 className="modal-sub-header">Start your free trial {this.props.otherForm}</h2>
                 <form className="login-form" onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
+                    <div className="errors">
+                        {this.renderErrors()}
+                    </div>
                     <label className="login-label">Email Address
                         <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />
                     </label>
