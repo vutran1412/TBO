@@ -20,7 +20,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         const user = Object.assign({}, this.state)
-        this.props.logIn(user)
+        this.props.logIn(user).then(this.props.modalClose())
     }
 
     renderErrors() {
@@ -34,20 +34,23 @@ class SessionForm extends React.Component {
             </ul>
         );
     }
+
                 
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit}>
-                    <label>Email
-                        <input type="text" value={this.state.email} onChange={this.update('email')} />
+                <div onClick={this.props.modalClose} className="close-x">x</div>
+                <h1 className="modal-header">Sign In</h1>
+                <h2 className="modal-sub-header">Start your free trial {this.props.otherForm}</h2>
+                <form className="login-form" onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
+                    <label className="login-label">Email Address
+                        <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />
                     </label>
-                    <br/>
-                    <label>Password
-                        <input type="password" value={this.state.password} onChange={this.update('password')} />
+                    <label className="login-label">Password
+                        <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />
                     </label>
-                    <br/>
-                    <input type="submit" value="Sign In" />
+                    <input className="login-button" type="submit" value={this.props.formType} />
                 </form>
             </div>
         )

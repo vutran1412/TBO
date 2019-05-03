@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom'
 import SplashPage from '../splash/splash'
 
 
-const Greeting = ({ currentUser, logOut }) => {
+const Greeting = ({ currentUser, logOut, modalOpen }) => {
     const splashLink = () => (
-        <SplashPage />
+        <nav className="login-signup">
+            <button className="header-button" onClick={() => modalOpen('login')}>Login</button>
+            &nbsp; &nbsp;
+            <button className="header-button" onClick={() => modalOpen('signup')}>Sign Up</button>
+        </nav>
     )
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <h2>Welcome to TBO, hello {currentUser.first_name}></h2>
+            <h2>Welcome to TBO, hello {currentUser.firstName}</h2>
             <button className="header-button" onClick={logOut}>Log Out</button>
         </hgroup>
   )

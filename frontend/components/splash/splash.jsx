@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 
 const SplashPage = () => (
     <div className="splash-page">
-        <ul className="nav-modal-container">
-            <li><Link to="/signup">Sign Up</Link></li>
-            <li><Link to="/login">Log In</Link></li>
-        </ul>
+        <div className="nav-modal-container">
+           <button className="modal-button"><Link to="/signup">Sign Up</Link></button>
+           <button className="modal-button"><Link to="/login">Log In</Link></button>
+        </div>
     </div>
 )
 

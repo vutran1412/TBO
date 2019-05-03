@@ -22,7 +22,7 @@ class SignUpForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         const user = Object.assign({}, this.state)
-        this.props.signUp(user)
+        this.props.signUp(user).then(this.props.modalClose())
     }
 
     renderErrors() {
@@ -40,26 +40,25 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
-                    <label>First Name
-                        <input type="text" value={this.state.firstName} onChange={this.update('first_name')} />
-                    </label>
-                    <br/>
-                    <label>Last Name
-                        <input type="text" value={this.state.lastName} onChange={this.update('last_name')} />
-                    </label>
-                    <br/>
-                    <label>Email
-                        <input type="text" value={this.state.email} onChange={this.update('email')} />
-                    </label>
-                    <br/>
-                    <label>Password
-                        <input type="password" value={this.state.password} onChange={this.update('password')} />
-                    </label>
-                    <br/>
-                    <input type="submit" value="Sign Up" />
-                </form>
+                <div onClick={this.props.modalClose} className="close-x">x</div>
+                    <h1 className="modal-header">Sign Up</h1>
+                    <h2 className="modal-sub-header" >Already subscribed? {this.props.otherForm}</h2>
+                    <form onSubmit={this.handleSubmit} className="login-form">
+                        {this.renderErrors()}
+                        <label className="login-label">First Name
+                            <input className="login-input" type="text" value={this.state.firstName} onChange={this.update('first_name')} />
+                        </label>
+                        <label className="login-label">Last Name
+                            <input className="login-input" type="text" value={this.state.lastName} onChange={this.update('last_name')} />
+                        </label>
+                        <label className="login-label">Email Address
+                            <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />
+                        </label>
+                        <label className="login-label">Password
+                            <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />
+                        </label>
+                        <input className="login-button" type="submit" value={this.props.formType}/>
+                    </form>
             </div>
         )
     }

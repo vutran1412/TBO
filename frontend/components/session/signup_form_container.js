@@ -1,17 +1,25 @@
+import React from 'react'
 import { connect } from 'react-redux'
 import { signUp, logIn } from '../../actions/session_actions'
 import SignUpForm from '../session/signup_form'
+import { modalOpen, modalClose } from '../../actions/modal_actions'
 
 const mapStateToProps = ({ errors }) => (
     {
-        errors: errors.session
+        errors: errors.session,
+        formType: 'Sign Up'
     }
 )
 
 const mapDispatchToProps = dispatch => (
     {
         signUp: user => dispatch(signUp(user)),
-        logIn: user => dispatch(logIn(user))
+        otherForm: (
+            <button className="modal-switch" onClick={() => dispatch(modalOpen('login'))}>
+                Sign In
+            </button>
+        ),
+        modalClose: () => dispatch(modalClose())
     }
 )
 

@@ -5,7 +5,7 @@ import LoginFormContainer from '../session/login_form_container'
 import SignUpFormContainer from '../session/signup_form_container'
 
 
-const Modal = ({ modal, closeModal }) => {
+const Modal = ({ modal, modalClose }) => {
     if (!modal) {
         return null;
     }
@@ -13,18 +13,18 @@ const Modal = ({ modal, closeModal }) => {
     switch(modal) {
         case 'login':
             component = <LoginFormContainer />
-            return component
+            break
         case 'signup':
             component = <SignUpFormContainer />
-            return component
+            break
         default:
             return null
     }
 
     return (
-        <div className="modal-background" onClick={closeModal}>
+        <div className="modal-background" onClick={modalClose}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
-                { component }
+                {component}
             </div>
         </div>
     )
@@ -38,7 +38,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        closeModal: () => dispatchEvent(closeModal())
+        modalClose: () => dispatchEvent(modalClose())
     }
 }
 
