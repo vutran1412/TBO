@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: series
+#
+#  id          :bigint           not null, primary key
+#  title       :string           not null
+#  description :text             not null
+#  rating      :string           not null
+#  audio       :float            not null
+#  video       :string           not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  rating: MyString
+  audio: 1.5
+  video: MyString
+
+two:
+  title: MyString
+  description: MyText
+  rating: MyString
+  audio: 1.5
+  video: MyString

@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: movies
+#
+#  id          :bigint           not null, primary key
+#  title       :string           not null
+#  genre       :string           not null
+#  audio       :float            not null
+#  video       :string           not null
+#  year        :integer          not null
+#  length      :string           not null
+#  description :text             not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  genre: MyString
+  audio: 1.5
+  video: MyString
+  year: 1
+  length: MyString
+  description: MyText
+
+two:
+  title: MyString
+  genre: MyString
+  audio: 1.5
+  video: MyString
+  year: 1
+  length: MyString
+  description: MyText

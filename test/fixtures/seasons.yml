@@ -1,0 +1,17 @@
+# == Schema Information
+#
+# Table name: seasons
+#
+#  id         :bigint           not null, primary key
+#  series_id  :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  series_id: 1
+
+two:
+  series_id: 1

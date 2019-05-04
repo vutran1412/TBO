@@ -21,6 +21,10 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+    has_one :list, foreign_key: :user_id, class_name: :List
+    has_many :movies, through: :list, source: :movie
+    has_many :series, through: :list, source: :series
+
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)
