@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
 
     demoUserTyper(stringInput, type) {
         
-        let speed = 50
+        let speed = 30
         let i = 0
         let intervalId = setInterval(() => {
             this.setState({
