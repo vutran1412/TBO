@@ -12,6 +12,7 @@
 #  description :text             not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  rating      :string           not null
 #
 
 class Movie < ApplicationRecord
@@ -20,4 +21,6 @@ class Movie < ApplicationRecord
 
     has_many :lists, foreign_key: :content_id, class_name: :List
     has_many :users, through: :lists, source: :user
+
+    has_one_attached :photo
 end
