@@ -1,16 +1,22 @@
 // // Place all the styles related to the StaticPages controller here.
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
+    background-color: black;
+}
+
+#splash-body {
     background-image: image-url('splash_image.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-color: black;
+    background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden; 
-    width: 1461px; 
+    width: 1661px; 
     height: 969px; 
     position: fixed;
+    z-index: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
