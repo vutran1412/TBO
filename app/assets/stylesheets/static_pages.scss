@@ -6,7 +6,29 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden; 
+    width: 1461px; 
+    height: 969px; 
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     
+}
+
+.main-body {
+    background-image: none;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden; 
+    width: 1461px; 
+    height: 969px; 
+    position: fixed;
+    clear: both;
 }
 
 .modal-child {
@@ -20,7 +42,7 @@ body {
   background-color: rgb(25, 25, 25);
   margin: 20px;
   padding: 20px;
-  width: 458px;
+  width: 475px;
 }
 
 
@@ -133,20 +155,126 @@ body {
 // }
 
 .login-button:hover {
-    color: azure;
+    color: rgb(54, 167, 224);
 }
 
-.header-button {
-    color: lightgray;
-    background-color: transparent;
-    font-size: 35px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
 
 .header-button:hover {
+    color: rgb(54, 167, 224);
+}
+
+.splash-sign-up-container {
+    width: 293px; 
+    height: 48px; 
+    cursor: pointer; 
+    color: rgb(41, 121, 162); 
+    background-color: transparent;
+    left: 1px; 
+    top: 191px;
+}
+
+.splash-content-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     color: azure;
+    width: 1411px; 
+    height: 809px; 
+    left: 50px; 
+    top: 50px;
+    
+}
+
+.splash-content-container > div {
+    margin: 20px;
+}
+
+.splash-content-container > h1 {
+    margin: 20px;
+} 
+
+.splash-header {
+    width: 350px; 
+    height: 31px; 
+    left: 50px; 
+    top: 50px;
+    font-size: 38px;
+    background-size: 100% 100%;
+}
+
+.splash-sub-header {
+    width: 350px; 
+    height: 31px; 
+    left: 50px; 
+    top: 20px;
+    font-size: 48px;
+    background-size: 100% 100%;
+}
+
+.splash-pitch { 
+    display: inline-block;  
+    font-size: 18px;
+    font-style: normal; 
+    text-decoration: none; 
+    text-transform: none; 
+    line-height: 27px; 
+    color: azure;
+    width: 430px; 
+    top: 72px;
+}
+
+.splash-sign-in-container {
+    display: inline-block;  
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 18px; 
+    font-style: normal; 
+    text-decoration: none; 
+    text-transform: none; 
+    line-height: 27px; 
+    letter-spacing: 0px; 
+    color: azure; 
+    white-space: pre; 
+    transform: translate(0px, 0px)
+}
+
+.splash-sign-up-button {
+    font-family: inherit; 
+    font-size: 16px; 
+    font-style: normal; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    line-height: 20px; 
+    letter-spacing: 0.5px; 
+    color: azure;
+    background-color: rgb(41, 121, 162);
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+.splash-sign-up-button:hover {
+    color: rgb(54, 167, 224);
+    cursor: pointer;
+}
+
+.splash-sign-in-button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 27px;
+    letter-spacing: 0px;
+    color: rgb(41, 121, 162);
+    background-color: transparent; 
+    border: none;
+    text-align: center;
+}
+
+.splash-sign-in-button:hover {
+    color: rgb(54, 167, 224);
+    cursor: pointer;
 }
 
 .modal-button {
@@ -165,7 +293,7 @@ body {
 }
 
 .modal-switch:hover {
-    color: azure;
+    color: rgb(54, 167, 224);
 }
 
 a {

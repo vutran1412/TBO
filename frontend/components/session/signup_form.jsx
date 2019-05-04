@@ -55,7 +55,7 @@ class SignUpForm extends React.Component {
                             <input className="login-input" type="text" value={this.state.lastName} onChange={this.update('last_name')} />
                         </label>
                         <label className="login-label">Email Address
-                            <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />
+                            <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
                         </label>
                         <label className="login-label">Password
                             <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />

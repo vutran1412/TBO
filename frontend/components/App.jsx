@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom'
 import GreetingContainer from './greeting/greeting_container'
 import Modal from './modal/modal'
 import { AuthRoute } from '../util/route_util'
-import SplashPage from './splash/splash'
 import LoginFormContainer from './session/login_form_container'
 import SignUpFormContainer from './session/signup_form_container'
 
@@ -12,8 +11,9 @@ const App = () => (
     <div>
         
         <header className="nav-header">
-            <GreetingContainer />
+            
         </header>
+        <GreetingContainer />
         <Modal />
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />

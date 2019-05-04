@@ -6,10 +6,13 @@ class SessionForm extends React.Component {
         super(props)
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            isDemoUser: false,
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.renderErrors = this.renderErrors.bind(this)
+        this.demoUserTyper = this.demoUserTyper.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
     update(field) {
@@ -19,6 +22,7 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault()
         const user = Object.assign({}, this.state)
         this.props.logIn(user).then(this.props.modalClose)
@@ -36,24 +40,70 @@ class SessionForm extends React.Component {
         );
     }
 
+    handleDemoUser() {
+        const user = Object.assign({}, this.state)
+        this.props.logIn(user).then(this.props.modalClose)
+    }
+
+    demoUserTyper(stringInput, type) {
+        
+        let speed = 50
+        let i = 0
+        let intervalId = setInterval(() => {
+            this.setState({
+                [type]: this.state[type] += stringInput[i]
+            }, () => {
+                    i++
+                    if (i === stringInput.length) {
+                        clearInterval(intervalId)
+                        if (type === "email") {
+                            this.demoUserTyper("password", "password")
+                        } else {
+                            this.handleDemoUser()
+                        }
+                }
+            } )
+        }, speed)
+        
+    }
+
+    handleClick(e) {
+        
+        e.preventDefault()
+        this.setState({
+            email: '',
+            password: '',
+            isDemoUser: true
+        }, () => this.demoUserTyper("demouser@email.com", "email"))
+        
+    }
+
+    componentDidUpdate() {
+        if (this.isDemoUser === true) {
+            this.handleDemoUser()
+        }
+    }
+
                 
     render() {
+
         return (
             <div className="login-form-container">
                 <div onClick={this.props.modalClose} className="close-x">x</div>
                 <h1 className="modal-header">Sign In</h1>
                 <h2 className="modal-sub-header">Start your free trial {this.props.otherForm}</h2>
-                <form className="login-form" onSubmit={this.handleSubmit}>
+                <form id="login-form" className="login-form" onSubmit={this.handleSubmit}>
                     <div className="errors">
                         {this.renderErrors()}
                     </div>
                     <label className="login-label">Email Address
-                        <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />
+                        <input id="email" className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />}        
                     </label>
                     <label className="login-label">Password
-                        <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />
+                        <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />}
                     </label>
-                    <input className="login-button" type="submit" value={this.props.formType} />
+                    <input id="form-submit"className="login-button" type="submit" value={this.props.formType} />
+                    <button className="login-button" value={true} onClick={this.handleClick}>Demo User</button>
                 </form>
             </div>
         )
