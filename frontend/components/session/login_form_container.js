@@ -12,7 +12,6 @@ const mapStateToProps = ({ errors }) => (
 )
 
 const mapDispatchToProps = dispatch => {
-    // debugger
     return ({
         logIn: user => dispatch(logIn(user)),
         otherForm: (

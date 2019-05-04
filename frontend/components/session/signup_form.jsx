@@ -21,7 +21,6 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        // debugger
         const user = Object.assign({}, this.state)
         this.props.signUp(user).then(this.props.modalClose)
     }
@@ -36,6 +35,15 @@ class SignUpForm extends React.Component {
                 ))}
             </ul>
         );
+    }
+
+    componentWillUnmount() {
+        this.setState({
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: ''
+        })
     }
 
     render() {
@@ -55,7 +63,7 @@ class SignUpForm extends React.Component {
                             <input className="login-input" type="text" value={this.state.lastName} onChange={this.update('last_name')} />
                         </label>
                         <label className="login-label">Email Address
-                            <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                            <input className="login-input" type="email" value={this.state.email} onChange={this.update('email')} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
                         </label>
                         <label className="login-label">Password
                             <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />

@@ -79,14 +79,18 @@ body {
 
 .close-x {
     top: 205px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     left: 710px;
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     color: azure;
     cursor: pointer;
     align-self: flex-end;
+}
+
+.close-x:hover {
+    color: rgb(54, 167, 224);
 }
 
 .nav-header {

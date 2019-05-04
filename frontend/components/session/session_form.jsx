@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -22,7 +23,6 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault()
         const user = Object.assign({}, this.state)
         this.props.logIn(user).then(this.props.modalClose)
@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
 
     demoUserTyper(stringInput, type) {
         
-        let speed = 30
+        let speed = 50
         let i = 0
         let intervalId = setInterval(() => {
             this.setState({
@@ -97,10 +97,10 @@ class SessionForm extends React.Component {
                         {this.renderErrors()}
                     </div>
                     <label className="login-label">Email Address
-                        <input id="email" className="login-input" type="text" value={this.state.email} onChange={this.update('email')} />}        
+                        <input id="email" className="login-input" type="email" value={this.state.email} onChange={this.update('email')} />        
                     </label>
                     <label className="login-label">Password
-                        <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} />}
+                        <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')}  />
                     </label>
                     <input id="form-submit"className="login-button" type="submit" value={this.props.formType} />
                     <button className="login-button" value={true} onClick={this.handleClick}>Demo User</button>
