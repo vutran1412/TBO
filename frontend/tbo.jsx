@@ -4,6 +4,7 @@ import configureStore from './store/store'
 import Root from './components/root'
 import { logIn, logOut } from './actions/session_actions'
 import { fetchMovies, fetchMovie } from './actions/movie_actions'
+import { fetchAllSeries, fetchSeries } from './actions/series_actions'
 
 
 
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.logOut = logOut
     window.fetchMovie = fetchMovie
     window.fetchMovies = fetchMovies
+    window.fetchAllSeries = fetchAllSeries
+    window.fetchSeries = fetchSeries
     // TESTING END
     
     const root = document.getElementById('root')

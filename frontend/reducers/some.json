@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "movies": {
+            "0": {
+                "id": "10",
+                "title": "BlacKkKlansman",
+                "genre": "drama",
+                "audio": "5.1",
+                "video": "HD"
+            },
+            "1": {
+                "id": "11",
+                "title": "Deadpool 2",
+                "genre": "comedy",
+                "audio": "5.1",
+                "video": "HD"
+            },
+            "2": {
+                "id": "12",
+                "title": "Get Him to the Greek",
+                "genre": "comedy",
+                "audio": "5.1",
+                "video": "HD"
+            },
+        "series": {
+            "4": {
+                "id": "4",
+                "title": "Barry",
+                "description": "A dark comedy starring Bill Hader ('Saturday Night…s Stephen Root, Henry Winkler and Sarah Goldberg.",
+                "rating": "MA",
+                "audio": "5.1"
+            },
+            "seasons": {
+                "4": {
+                    "id": "4",
+                    "seriesId": "4"
+                    }
+                },
+            "episodes": {
+                "1": {
+                    "description": "Series premiere. Barry (Bill Hader) is a disillusioned Midwesterner who became a hitman at the urging of Monroe Fuches, an old friend who's become his handler. Sent to LA to kill a young actor, Barry accidentally interrupts an acting class and gets bitten by the acting bug as he bonds with teacher/guru Gene Cousineau and his students, including a pretty girl named Sally Reed.",
+                    "id": "1",
+                    "length": "34 min",
+                    "seasonId": "4",
+                    "title": "Chapter One: Make Your Mark",
+                    "year": "2018"
+                }
+            },
+        "users": {
+            "1": {
+                "firstName": "demo",
+                "lastName": "user",
+                "email": "demouser@email.com",
+                "id": "1"
+            }
+        }
+    },
+    "errors": {
+        "session": [
+            "Invalid Credentials"
+        ]
+    },
+    "session": {
+        "id": "1"
+    },
+    "ui": {
+        "modal": null,
+        "videoPlaying": false
+            }
+        }   
+    }
+
+}

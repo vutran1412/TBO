@@ -23,9 +23,15 @@ const Greeting = ({ currentUser, logOut, modalOpen }) => {
     )
     const personalGreeting = () => (
         <div className="main-body">
-            <hgroup className="header-group">
+            <header className="nav-header header-nav-transition">
+                <Link className="nav-link" to="/"><h2>TBO Now</h2></Link>
+                <h2 className="separator-pipe">|</h2>
+                <button className="content-index-button"><h2>Series</h2></button>
+                <button className="content-index-button"><h2>Movies</h2></button>
+                <Link className="nav-link" to="#"><i className="fas fa-search"></i></Link>
                 <button className="header-button" onClick={logOut}>Log Out</button>
-            </hgroup>
+            </header>
+            
         </div>
   )
 

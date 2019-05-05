@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import GreetingContainer from './greeting/greeting_container'
 import Modal from './modal/modal'
 import { AuthRoute } from '../util/route_util'
@@ -9,10 +9,6 @@ import SignUpFormContainer from './session/signup_form_container'
 
 const App = () => (
     <body>
-        
-        <header className="nav-header">
-            
-        </header>
         <GreetingContainer />
         <Modal />
         <Switch>
