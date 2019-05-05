@@ -1,1 +1,0 @@
-json.array! @series, partial: 'api/series/series', as: :series
