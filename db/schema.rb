@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_04_195423) do
+ActiveRecord::Schema.define(version: 2019_05_05_003949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,10 +40,10 @@ ActiveRecord::Schema.define(version: 2019_05_04_195423) do
     t.integer "season_id", null: false
     t.string "title", null: false
     t.text "description", null: false
-    t.date "air_date", null: false
     t.string "length", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
     t.index ["season_id"], name: "index_episodes_on_season_id"
     t.index ["title"], name: "index_episodes_on_title"
   end

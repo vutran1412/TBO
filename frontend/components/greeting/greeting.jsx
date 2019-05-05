@@ -5,7 +5,7 @@ import SplashPage from '../splash/splash'
 
 const Greeting = ({ currentUser, logOut, modalOpen }) => {
     const splashLink = () => (
-        <body id="splash-body">
+        <div id="splash-body">
             <div className="splash-content-container">
                 <h1 className="splash-header">TBO NOW</h1>
                 <h1 className="splash-sub-header">Get All of TBO</h1>
@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logOut, modalOpen }) => {
                     <h2>Already have an account? <button className="splash-sign-in-button" onClick={() => modalOpen('login')}>Sign In</button></h2>
                 </div>
             </div>
-        </body>
+        </div>
     )
     const personalGreeting = () => (
         <div className="main-body">

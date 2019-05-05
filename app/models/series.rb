@@ -18,6 +18,6 @@ class Series < ApplicationRecord
 
     has_many :lists, foreign_key: :content_id, class_name: :List
     has_many :seasons, foreign_key: :series_id, class_name: :Season
-    has_many :episodes, through: :season, source: :episodes
+    has_many :episodes, through: :seasons, source: :episodes
     has_many :users, through: :lists, source: :user
 end

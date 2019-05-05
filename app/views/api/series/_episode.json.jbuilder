@@ -1,5 +1,7 @@
-# == Schema Information
-#
+json.set! episode.id do
+    json.extract! episode, :id, :season_id, :title, :description, :length, :year
+end
+
 # Table name: episodes
 #
 #  id          :bigint           not null, primary key
@@ -10,12 +12,3 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  year        :integer
-#
-
-require 'test_helper'
-
-class EpisodeTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end

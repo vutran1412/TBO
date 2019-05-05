@@ -8,7 +8,7 @@ import SignUpFormContainer from './session/signup_form_container'
 
 
 const App = () => (
-    <div>
+    <body>
         
         <header className="nav-header">
             
@@ -19,7 +19,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>
-    </div>
+    </body>
 )
 
 export default App

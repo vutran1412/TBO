@@ -6,10 +6,10 @@
 #  season_id   :integer          not null
 #  title       :string           not null
 #  description :text             not null
-#  air_date    :date             not null
 #  length      :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  year        :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
