@@ -1,13 +1,12 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import MovieIndex from './movie_index'
-import { fetchMovies } from '../../actions/'
+import { fetchMovies } from '../../actions/movie_actions'
 
-const mapStateToProps = state => (
-    {
-        movies: Object.values(state.movies)
-    }
-)
+const mapStateToProps = state => {
+    return ({
+        movies: state.movies
+    })
+}
 
 const mapDispatchToProps = dispatch => (
     {
