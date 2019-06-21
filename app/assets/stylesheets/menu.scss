@@ -1,0 +1,59 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+img.resize {
+  max-width:200px;
+  max-height:50px;
+}
+
+
+.nav-image {
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav-image:hover {
+    color: azure;
+    cursor: pointer;
+}
+
+#burger-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#browse-title {
+  margin-left: 20px;
+  margin-top: .5px;
+}
+
+#browse-title:hover {
+  color:azure;
+}
+
+

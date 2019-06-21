@@ -2,9 +2,9 @@ import { connect } from 'react-redux'
 import { modalOpen } from '../../actions/modal_actions'
 import Splash from './splash'
 
-const mapStateToProps = ({ session, entities: { users }, ui: { modal } }) => (
+const mapStateToProps = ({ session, entities: { user }, ui: { modal } }) => (
     {
-        currentUser: user[session.id],
+        // currentUser: user[session.id],
         modal: modal
     }
 )
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => (
     }
 )
 
-export default connect(mapStateTopProps, mapDispatchToProps)(Splash)
+export default connect(mapStateToProps, mapDispatchToProps)(Splash)

@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from '../modal/modal'
 
 const Splash = (props) => (
-    <div>
+    <div id="splash-body">
         <Modal />
         <div className="splash-content-container">
             <div className="splash-header"></div>

@@ -1,4 +1,3 @@
-import { connect } from "http2";
 import React from 'react'
 import { modalClose } from '../../actions/modal_actions'
 import { connect } from 'react-redux'

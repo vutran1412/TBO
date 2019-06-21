@@ -16,8 +16,8 @@ module.exports = {
                     query: {
                         presets: ['@babel/env', '@babel/react']
                     }
-                },
-            }
+                }
+            },
         ]
     },
     devtool: 'inline-source-map',
