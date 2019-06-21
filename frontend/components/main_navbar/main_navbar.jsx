@@ -63,6 +63,7 @@ class MainNavBar extends React.Component {
                 width: '100%',
                 color: 'white',
                 fontFamily: 'Open Sans',
+                border: '1px solid blue'
             },
             logo: {
                 margin: '0 auto',
