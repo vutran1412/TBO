@@ -31,15 +31,6 @@ class MenuItem extends React.Component {
                 animationDelay: this.props.delay,
 
             },
-            line: {
-                width: '35%',
-                height: '1px',
-                background: 'gray',
-                margin: '0 auto',
-                animation: '0.5s shrink forwards',
-                animationDelay: this.props.delay,
-
-            }
         }
         return (
             <div style={styles.container}>
@@ -51,7 +42,6 @@ class MenuItem extends React.Component {
                 >
                     {this.props.children}
                 </div>
-                <div style={styles.line} />
             </div>
         )
     }
