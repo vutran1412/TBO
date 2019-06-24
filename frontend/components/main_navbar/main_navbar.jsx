@@ -114,8 +114,8 @@ class MainNavBar extends React.Component {
        
         return (
             <>
-        {this.state.loading ? <div></div> : <div>
-                <div style={styles.container}>
+        {this.state.loading ? <div></div> :
+                <nav style={styles.container}>
                     <div style={styles.browse}>
                         <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color='white' />
                     </div>
@@ -134,8 +134,8 @@ class MainNavBar extends React.Component {
                     <div style={styles.user} id="user-container">
                         <i className="fas fa-user"></i>
                     </div>
-                </div>
-            </div>}
+                </nav>
+            }
             </>
         )
     }
