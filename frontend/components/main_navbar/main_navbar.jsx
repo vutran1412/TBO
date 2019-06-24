@@ -10,9 +10,21 @@ class MainNavBar extends React.Component {
         super(props)
         this.state = {
             hasScroll: false,
-            menuOpen: false
+            menuOpen: false,
+            loading: true
         }
         this.handleScroll = this.handleScroll.bind(this)
+    }
+
+    componentDidMount() {
+        let loadingTimeoutId = setTimeout(() => {
+            this.setState({
+                loading: false
+            })
+            if (this.isLoading) {
+                clearTimeout(loadingTimeoutId)
+            }
+        }, 1000)
     }
 
     handleMenuClick() {
@@ -57,7 +69,7 @@ class MainNavBar extends React.Component {
                 zIndex: '99',
                 opacity: 0.9,
                 display: 'grid',
-                gridTemplateColumn: '1fr 1fr 1fr 1fr 1fr',
+                gridTemplateColumn: '100px 100px 1fr 1fr 100px',
                 background: 'black',
                 width: '100%',
                 color: 'white',
@@ -101,28 +113,30 @@ class MainNavBar extends React.Component {
 
        
         return (
-        <div>
-            <div style={styles.container}>
-                <div style={styles.browse}>
-                    <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color='white' />
+            <>
+        {this.state.loading ? <div></div> : <div>
+                <div style={styles.container}>
+                    <div style={styles.browse}>
+                        <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color='white' />
+                    </div>
+                    <Menu open={this.state.menuOpen}>
+                        {menuItems}
+                    </Menu>
+                    <div style={styles.search} id="search-container">
+                        <i className="fas fa-search"></i>
+                        <h3 className="search-button">
+                            SEARCH
+                        </h3>
+                    </div>
+                    <div style={styles.logo}>
+                        <img className="nav-image resize" src={window.logoImage} />
+                    </div>
+                    <div style={styles.user} id="user-container">
+                        <i className="fas fa-user"></i>
+                    </div>
                 </div>
-                <Menu open={this.state.menuOpen}>
-                    {menuItems}
-                </Menu>
-                <div style={styles.search} id="search-container">
-                    <i className="fas fa-search"></i>
-                    <h3 className="search-button">
-                        SEARCH
-                    </h3>
-                </div>
-                <div style={styles.logo}>
-                    <img className="nav-image resize" src={window.logoImage} />
-                </div>
-                <div style={styles.user} id="user-container">
-                    <i className="fas fa-user"></i>
-                </div>
-            </div>
-        </div>
+            </div>}
+            </>
         )
     }
 }

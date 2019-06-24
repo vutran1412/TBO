@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.demoUserTyper = this.demoUserTyper.bind(this)
         this.handleClick = this.handleClick.bind(this)
+        this.renderErrors = this.renderErrors.bind(this)
     }
 
     update(field) {
@@ -26,17 +27,17 @@ class SessionForm extends React.Component {
         this.props.logIn(user).then(this.props.modalClose)
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     )
-    // }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     handleDemoUser() {
         const user = Object.assign({}, this.state)
@@ -83,9 +84,9 @@ class SessionForm extends React.Component {
                 <h1 className="modal-header">Sign In</h1>
                 <h2 className="modal-sub-header">Start your free trial {this.props.otherForm}</h2>
                 <form id="login-form" className="login-form" onSubmit={this.handleSubmit}>
-                    {/* <div className="errors">
+                    <div className="errors">
                         {this.renderErrors()}
-                    </div> */}
+                    </div>
                     <label className="login-label">Email
                         <input id="email" className="login-input" type="email" value={this.state.email} onChange={this.update('email')} />
                     </label>

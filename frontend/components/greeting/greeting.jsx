@@ -16,11 +16,6 @@ class Greeting extends React.Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll)
-        setTimeout(() => {
-            this.setState({
-                isLoading: false
-            })
-        }, 1000)
     }
 
     handleScroll() {
@@ -38,10 +33,11 @@ class Greeting extends React.Component {
     render() {
         return (this.props.currentUser) ? (
             <>
-                <Loading isLoading={this.state.isLoading} />
+                <Loading />
                 <div className="main-content-container" onScroll={this.handleScroll}>
                     <MainNavbarContainer />
                 </div>
+                
             </>
         ) : <SplashContainer />
     }

@@ -27,17 +27,17 @@ class SignUpForm extends React.Component {
         this.props.signUp(user).then(this.props.modalClose)
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     )
-    // }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     componentDidUnMount() {
         this.setState({
@@ -56,9 +56,9 @@ class SignUpForm extends React.Component {
                 <h1 className="modal-header">Sign Up</h1>
                 <h2 className="modal-sub-header">Already Subscribed? {this.props.otherForm}</h2>
                 <form onSubmit={this.handleSubmit} className="login-form">
-                    {/* <div className="errors">
+                    <div className="errors">
                         {this.renderErrors()}
-                    </div> */}
+                    </div>
                     <label className="login-label">First Name
                         <input className="login-input" type="text" value={this.state.firstName} onChange={this.update('first_name')} />
                     </label>

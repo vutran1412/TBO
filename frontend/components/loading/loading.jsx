@@ -3,12 +3,27 @@ import Logo from './logo'
 import { Dots } from './dots'
 
 class Loading extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            loading: true
+        }
+    }
+
+    componentDidMount() {
+        let loadingTimeId = setTimeout(() => {
+            this.setState({
+                loading: false
+            })
+            if (!this.loading) {
+                clearTimeout(loadingTimeId)
+            }
+        }, 1000)
+    }
+
     render() {
-        const isLoading = this.props.isLoading
+        const isLoading = this.state.loading
         if (isLoading) {
-            setTimeout(() => {
-                return <Dots />
-            }, 1000)
             return <Logo />
         } else {
             return <div></div>

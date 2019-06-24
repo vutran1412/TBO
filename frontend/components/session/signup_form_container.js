@@ -6,7 +6,7 @@ import { modalOpen, modalClose } from '../../actions/modal_actions'
 
 const mapStateToProps = ({ errors }) => (
     {
-        // errors: errors.session,
+        errors: errors.session,
         formType: 'Sign Up'
     }
 )
