@@ -56,17 +56,31 @@ class MainNavBar extends React.Component {
                 left: 0,
                 zIndex: '99',
                 opacity: 0.9,
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
+                display: 'grid',
+                gridTemplateColumn: '1fr 1fr 1fr 1fr 1fr',
                 background: 'black',
                 width: '100%',
                 color: 'white',
                 fontFamily: 'Open Sans',
-                border: '1px solid blue'
+            },
+            browse: {
+                gridColumn: '1',
+                justifySelf: 'center'
+            },
+            search: {
+                gridcolumn: '2',
+                justifySelf: 'center',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-start'
             },
             logo: {
-                margin: '0 auto',
+                gridColumn: '3 / 4',
+                justifySelf: 'center'
+            },
+            user: {
+                gridColumn: '6',
+                justifySelf: 'center'
             },
             body: {
                 marginBottom: '30px',
@@ -92,14 +106,25 @@ class MainNavBar extends React.Component {
         return (
         <div>
             <div style={styles.container}>
-                <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color='white' onMouseOver={(e) => e.target.style.color = "blue"} />
-                <img className="nav-image resize" src={window.logoImage} />
-                <img className="nav-image resize" src={window.userDefault} onClick={() => this.handleMenuClick()} />
+                <div style={styles.browse}>
+                    <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color='white' />
+                </div>
+                <Menu open={this.state.menuOpen}>
+                    {menuItems}
+                </Menu>
+                <div style={styles.search}>
+                    <i className="fas fa-search"></i>
+                    <h3>
+                        SEARCH
+                    </h3>
+                </div>
+                <div style={styles.logo}>
+                    <img className="nav-image resize" src={window.logoImage} />
+                </div>
+                <div style={styles.user}>
+                    <i className="fas fa-user"></i>
+                </div>
             </div>
-            <Menu open={this.state.menuOpen}>
-                {menuItems}
-            </Menu>
-            
         </div>
         )
     }

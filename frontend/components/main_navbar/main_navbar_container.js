@@ -2,11 +2,11 @@ import { connect } from 'react-redux'
 import MainNavBar from './main_navbar'
 import { logout } from '../../actions/session_actions'
 
-const mapStateToProps = state => (
-    {
+// const mapStateToProps = state => (
+//     {
 
-    }
-)
+//     }
+// )
 
 const mapDispatchToProps = dispatch => (
     {
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => (
     }
 )
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainNavBar)
+export default connect(null, mapDispatchToProps)(MainNavBar)

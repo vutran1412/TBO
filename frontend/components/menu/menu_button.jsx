@@ -15,55 +15,30 @@ class MenuButton extends React.Component {
         }
     }
 
+    componentDidUpdate() {
+        let browseBar = document.getElementById('browse-bar')
+        if (this.state.open) {
+            browseBar.classList.remove('fa-bars')
+            browseBar.classList.add('fa-times')
+        } else {
+            browseBar.classList.remove('fa-times')
+            browseBar.classList.add('fa-bars')
+        }
+    }
+
     handleClick() {
-        this.setState({ open: !this.state.open });
+        this.setState({ open: !this.state.open });  
     }
 
     render() {
-        const styles = {
-            container: {
-                height: '37px',
-                width: '37px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                cursor: 'pointer',
-                padding: '4px',
-            },
-            line: {
-                height: '2px',
-                width: '20px',
-                background: this.state.color,
-                transition: 'all 0.2s ease',
-            },
-            lineTop: {
-                transform: this.state.open ? 'rotate(45deg)' : 'none',
-                transformOrigin: 'top left',
-                marginBottom: '5px',
-            },
-            lineMiddle: {
-                opacity: this.state.open ? 0 : 1,
-                transform: this.state.open ? 'translateX(-16px)' : 'none',
-            },
-            lineBottom: {
-                transform: this.state.open ? 'translateX(-1px) rotate(-45deg)' : 'none',
-                transformOrigin: 'top left',
-                marginTop: '5px',
-            },
-        }
+        
         return (
             <div id="burger-container">
-                <div id="hamburger-bars" style={styles.container}
+                <i className="fas fa-bars" id="browse-bar" onClick={this.props.onClick ? this.props.onClick :
+                    () => { this.handleClick()}}></i>
+                <h3 className="browse-button"
                     onClick={this.props.onClick ? this.props.onClick :
-                        () => { this.handleClick(); }}>
-                    <div style={{ ...styles.line, ...styles.lineTop }} />
-                    <div style={{ ...styles.line, ...styles.lineMiddle }} />
-                    <div style={{ ...styles.line, ...styles.lineBottom }} />
-                </div>
-                <h3 style={styles.container}
-                    onClick={this.props.onClick ? this.props.onClick :
-                        () => { this.handleClick(); }} id="browse-title">BROWSE</h3>
+                        () => { this.handleClick()}} id="browse-title">BROWSE</h3>
             </div>
         )
     }

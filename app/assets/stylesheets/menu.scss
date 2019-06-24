@@ -26,8 +26,13 @@
 }
 
 img.resize {
-  max-width:200px;
+  max-width:300px;
   max-height:50px;
+}
+
+img.user-resize {
+  max-width: 100px;
+  max-height: 50px;
 }
 
 
@@ -43,17 +48,28 @@ img.resize {
 }
 
 #burger-container {
-  display: flex;
-  justify-content: flex-start;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 
-#browse-title {
-  margin-left: 20px;
-  margin-top: .5px;
+.browse-button {
+  font-size: 18px;
 }
 
-#browse-title:hover {
+.browse-button:hover {
+  color: azure;
+  cursor: pointer;
+}
+
+#browse-bar {
+  font-size: 18px;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+#browse-bar:hover {
   color:azure;
+  cursor: pointer;
 }
 
 

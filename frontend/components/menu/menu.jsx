@@ -18,12 +18,13 @@ class Menu extends React.Component {
         const styles = {
             container: {
                 position: 'absolute',
-                top: 0,
-                left: 0,
+                top: 50,
+                left: 60,
                 height: this.state.open ? '100%' : 0,
-                width: '35vw',
+                width: '30vw',
                 display: 'flex',
                 flexDirection: 'column',
+                justifySelf: 'center',
                 background: 'black',
                 opacity: 0.95,
                 color: '#fafafa',
@@ -31,7 +32,7 @@ class Menu extends React.Component {
                 zIndex: 2,
             },
             menuList: {
-                paddingTop: '3rem',
+                paddingTop: '0rem',
             }
         }
         return (
