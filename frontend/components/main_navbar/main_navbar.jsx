@@ -68,11 +68,8 @@ class MainNavBar extends React.Component {
                 justifySelf: 'center'
             },
             search: {
-                gridcolumn: '2',
+                gridColumn: '2',
                 justifySelf: 'center',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'flex-start'
             },
             logo: {
                 gridColumn: '3 / 4',
@@ -112,16 +109,16 @@ class MainNavBar extends React.Component {
                 <Menu open={this.state.menuOpen}>
                     {menuItems}
                 </Menu>
-                <div style={styles.search}>
+                <div style={styles.search} id="search-container">
                     <i className="fas fa-search"></i>
-                    <h3>
+                    <h3 className="search-button">
                         SEARCH
                     </h3>
                 </div>
                 <div style={styles.logo}>
                     <img className="nav-image resize" src={window.logoImage} />
                 </div>
-                <div style={styles.user}>
+                <div style={styles.user} id="user-container">
                     <i className="fas fa-user"></i>
                 </div>
             </div>

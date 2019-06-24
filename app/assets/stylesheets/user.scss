@@ -1,0 +1,14 @@
+#user-container {
+    display: inline-flex;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.fa-user {
+    font-size: 18px;
+}
+
+.fa-user:hover {
+    color: azure;
+    cursor: pointer;
+}

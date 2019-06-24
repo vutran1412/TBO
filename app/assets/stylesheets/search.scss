@@ -1,0 +1,25 @@
+.fa-search {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+.fa-search:hover {
+    color: azure;
+    cursor: pointer;
+}
+
+.search-button {
+    font-size: 18px;
+    margin-top: 17px;
+}
+
+.search-button:hover {
+    color: azure;
+    cursor: pointer;
+}
+
+#search-container {
+    display: flex;
+    justify-content: space-evenly;
+}
