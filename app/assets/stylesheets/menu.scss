@@ -32,6 +32,11 @@
     background-repeat: no-repeat;
 }
 
+.nav-resize {
+  max-width: 300px;
+  max-height: 50px;
+}
+
 .nav-image:hover {
     color: azure;
     cursor: pointer;
