@@ -56,6 +56,25 @@
     align-self: flex-end;
 }
 
+.modal-button {
+    color: azure;
+    padding: 20px;
+    margin: 25px;
+}
+
+.modal-switch {
+    font-family: 'Open Sans', sans-serif;
+    color: lightgrey;
+    background-color: transparent;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-switch:hover {
+    color: rgb(54, 167, 224);
+}
+
 .close-x:hover {
     color: rgb(54, 167, 224);
 }
