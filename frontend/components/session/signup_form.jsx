@@ -15,6 +15,10 @@ class SignUpForm extends React.Component {
         
     }
 
+    componentDidMount() {
+        this.props.clearSessionErrors()
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value

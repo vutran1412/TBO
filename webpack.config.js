@@ -20,7 +20,7 @@ module.exports = {
             },
         ]
     },
-    devtool: false,
+    devtool: false, // set to false for production
     resolve: {
         extensions: ['.js', '.jsx', '*']
     }

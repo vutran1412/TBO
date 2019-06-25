@@ -15,6 +15,18 @@ class SessionForm extends React.Component {
         this.renderErrors = this.renderErrors.bind(this)
     }
 
+    componentDidMount() {
+        this.props.clearSessionErrors()
+    }
+
+    componentDidUnmount() {
+        this.setState({
+            email: '',
+            password: '',
+            isDemoUser: false
+        })
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
