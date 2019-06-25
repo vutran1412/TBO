@@ -28,7 +28,7 @@ class Menu extends React.Component {
                 background: 'black',
                 opacity: 0.95,
                 color: '#fafafa',
-                transition: 'width 0.3s ease',
+                transition: 'height 0.3s ease',
                 zIndex: 2,
             },
             menuList: {

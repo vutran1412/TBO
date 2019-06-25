@@ -22,4 +22,5 @@
     @import './logo_loader.scss';
     @import './search.scss';
     @import './user.scss';
+    @import './slide_show.scss';
     @import url('https://fonts.googleapis.com/css?family=Open+Sans');
