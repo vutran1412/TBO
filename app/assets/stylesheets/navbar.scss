@@ -1,4 +1,10 @@
-.logo {
-    background-image: image-url('tbo-06.png');
-    margin: 0 auto;
+#user-container {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.fa-user {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-right: 15px;
 }

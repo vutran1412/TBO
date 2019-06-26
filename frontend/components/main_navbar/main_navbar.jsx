@@ -111,7 +111,6 @@ class MainNavBar extends React.Component {
                     onClick={() => { this.handleLinkClick(); }}>{val}</MenuItem>)
         });
 
-       
         return (
             <>
         {this.state.loading ? <div></div> :
@@ -133,6 +132,9 @@ class MainNavBar extends React.Component {
                     </div>
                     <div style={styles.user} id="user-container">
                         <i className="fas fa-user"></i>
+                        <h3 className="search-button">
+                            {this.props.currentUser.first_name}
+                        </h3>
                     </div>
                 </nav>
             }
