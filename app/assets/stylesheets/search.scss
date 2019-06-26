@@ -11,7 +11,7 @@
 
 .search-button {
     font-size: 18px;
-    margin-top: 17px;
+    margin-top: 13px;
 }
 
 .search-button:hover {
@@ -22,4 +22,5 @@
 #search-container {
     display: flex;
     justify-content: space-evenly;
+    padding-left: 0px;
 }

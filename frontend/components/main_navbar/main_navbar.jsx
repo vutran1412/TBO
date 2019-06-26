@@ -81,7 +81,7 @@ class MainNavBar extends React.Component {
             },
             search: {
                 gridColumn: '2',
-                justifySelf: 'center',
+                justifySelf: 'flex-start',
             },
             logo: {
                 gridColumn: '3 / 4',
@@ -89,7 +89,8 @@ class MainNavBar extends React.Component {
             },
             user: {
                 gridColumn: '6',
-                justifySelf: 'center'
+                justifySelf: 'center',
+                paddingTop: '0px'
             },
             body: {
                 marginBottom: '30px',
