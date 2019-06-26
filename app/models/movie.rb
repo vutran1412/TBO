@@ -19,6 +19,7 @@ class Movie < ApplicationRecord
     validates :title, :genre, :audio, :format, :year, :length, :description, presence: true
     validates :title, uniqueness: true
 
-    has_many_attached :photos
-    has_many_attached :videos    
+    has_one_attached :thumbnail
+    has_one_attached :poster
+    has_one_attached :video    
 end
