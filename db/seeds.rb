@@ -44,95 +44,95 @@ User.create(
 
 # < --------------------- Development ---------------------------------------->
 
-# MOVIE_THUMBNAILS = [
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/dejavu.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/beerfest.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/crazyrichasians.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/deadpool2.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/halfbaked.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/macgruber.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/margincall.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/pacific_rim.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/themask.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/predator.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/thesiege.jpeg"
-# ]
-
-
-# MOVIE_POSTERS = [
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/dejavuposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/beerfestposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/crazyrichasiansposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/deadpool2poster.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/halfbakedposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/macgruberposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/margincallposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/pacific_rim_poster.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/themaskposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/thepredatorposter.jpeg",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/thesiegeposter.jpeg"
-# ]
-
-# MOVIE_VIDEOS = [
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Deja+vu/dejavu.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Beerfest/beerfest.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Crazy+Rich+Asians/crazyrichasians.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/DeadPool+2/deadpool2.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Half+Baked/halfbaked.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Macgruber/macgruber.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Margin+Call/margincall.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Pacific+rim+Uprising/pacificrimuprisin.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/The+Mask/themask.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Predator/thepredator.mp4",
-#     "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/The+Siege/thesiege.mp4"
-
-# ]
-
-# < --------------------- Production ---------------------------------------->
-
 MOVIE_THUMBNAILS = [
-    "https://tbo-prod.s3.us-east-2.amazonaws.com/photos-v2/movie+thumbnail/dejavu.jpeg",
-    "https://tbo-prod.s3.us-east-2.amazonaws.com/photos-v2/movie+thumbnail/beerfest.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/crazyrichasians.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/deadpool2.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/halfbaked.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/macgruber.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/margincall.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/pacific_rim.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/themask.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/predator.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/thesiege.jpeg"
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/dejavu.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/beerfest.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/crazyrichasians.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/deadpool2.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/halfbaked.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/macgruber.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/margincall.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/pacific_rim.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/themask.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/predator.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+thumbnail/thesiege.jpeg"
 ]
 
 
 MOVIE_POSTERS = [
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/dejavuposter.jpeg",
-    "https://tbo-prod.s3.us-east-2.amazonaws.com/photos-v2/movie+poster/beerfestposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/crazyrichasiansposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/deadpool2poster.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/halfbakedposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/macgruberposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/margincallposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/pacific_rim_poster.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/themaskposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/thepredatorposter.jpeg",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/thesiegeposter.jpeg"
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/dejavuposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/beerfestposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/crazyrichasiansposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/deadpool2poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/halfbakedposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/macgruberposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/margincallposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/pacific_rim_poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/themaskposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/thepredatorposter.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/photos-v2/movie+poster/thesiegeposter.jpeg"
 ]
 
 MOVIE_VIDEOS = [
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Deja+vu/dejavu.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Beerfest/beerfest.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Crazy+Rich+Asians/crazyrichasians.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/DeadPool+2/deadpool2.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Half+Baked/halfbaked.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Macgruber/macgruber.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Margin+Call/margincall.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Pacific+rim+Uprising/pacificrimuprisin.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/The+Mask/themask.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Predator/thepredator.mp4",
-    "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/The+Siege/thesiege.mp4"
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Deja+vu/dejavu.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Beerfest/beerfest.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Crazy+Rich+Asians/crazyrichasians.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/DeadPool+2/deadpool2.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Half+Baked/halfbaked.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Macgruber/macgruber.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Margin+Call/margincall.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Pacific+rim+Uprising/pacificrimuprisin.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/The+Mask/themask.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/Predator/thepredator.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/video-v2/The+Siege/thesiege.mp4"
 
 ]
+
+# # < --------------------- Production ---------------------------------------->
+
+# MOVIE_THUMBNAILS = [
+#     "https://tbo-prod.s3.us-east-2.amazonaws.com/photos-v2/movie+thumbnail/dejavu.jpeg",
+#     "https://tbo-prod.s3.us-east-2.amazonaws.com/photos-v2/movie+thumbnail/beerfest.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/crazyrichasians.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/deadpool2.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/halfbaked.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/macgruber.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/margincall.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/pacific_rim.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/themask.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/predator.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+thumbnail/thesiege.jpeg"
+# ]
+
+
+# MOVIE_POSTERS = [
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/dejavuposter.jpeg",
+#     "https://tbo-prod.s3.us-east-2.amazonaws.com/photos-v2/movie+poster/beerfestposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/crazyrichasiansposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/deadpool2poster.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/halfbakedposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/macgruberposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/margincallposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/pacific_rim_poster.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/themaskposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/thepredatorposter.jpeg",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/photos-v2/movie+poster/thesiegeposter.jpeg"
+# ]
+
+# MOVIE_VIDEOS = [
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Deja+vu/dejavu.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Beerfest/beerfest.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Crazy+Rich+Asians/crazyrichasians.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/DeadPool+2/deadpool2.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Half+Baked/halfbaked.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Macgruber/macgruber.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Margin+Call/margincall.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Pacific+rim+Uprising/pacificrimuprisin.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/The+Mask/themask.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/Predator/thepredator.mp4",
+#     "https://tbo-prod.s3-us-east-2.amazonaws.com/video-v2/The+Siege/thesiege.mp4"
+
+# ]
 
 def attach_assets(content, thumbnail_url, poster_url, video_url)
     content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
