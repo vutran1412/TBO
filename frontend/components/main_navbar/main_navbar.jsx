@@ -28,11 +28,15 @@ class MainNavBar extends React.Component {
     }
 
     handleMenuClick() {
-        this.setState({ menuOpen: !this.state.menuOpen });
+        this.setState({ menuOpen: !this.state.menuOpen })
     }
 
     handleLinkClick() {
-        this.setState({ menuOpen: false });
+        this.setState({ menuOpen: false })
+    }
+
+    handleMouseLeave() {
+        this.setState({ menuOpen: false })
     }
 
     scrollToTop() {

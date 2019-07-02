@@ -1,16 +1,21 @@
 import React from 'react'
+import Carousel from './carousel'
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props)
+
+    componentDidMount() {
+        this.props.fetchMovies()
     }
+
+    
 
     render() {
         return (
             <div>
-                <div>{/* Carousel will go here*/}Carousel</div>
-                
+                <Carousel movies={this.props.movies} />
             </div>
         )
     }
 }
+
+export default Home

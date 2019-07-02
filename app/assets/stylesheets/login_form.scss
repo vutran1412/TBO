@@ -39,7 +39,6 @@
     margin-top: 10px;
     height: 34px;
     border: none;
-// }
 }
 
 .login-button {
@@ -54,10 +53,14 @@
     height: 39px;
     border: none;
     margin-bottom: 10px;
-    text-align: center
+    text-align: center;
 }
-// }
 
 .login-button:hover {
     color: rgb(54, 167, 224);
+}
+
+.errors {
+    color: red;
+    font-size: 18px;
 }

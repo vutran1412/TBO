@@ -8,20 +8,23 @@ class Menu extends React.Component {
         }
     }
 
+    
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.open !== this.state.open) {
             this.setState({ open: nextProps.open });
         }
     }
 
+
     render() {
         const styles = {
             container: {
                 position: 'absolute',
                 top: 50,
-                left: 60,
-                height: this.state.open ? '100%' : 0,
-                width: '30vw',
+                left: 80,
+                height: this.state.open ? '25vh' : 0,
+                width: '20vw',
                 display: 'flex',
                 flexDirection: 'column',
                 justifySelf: 'center',
@@ -29,14 +32,14 @@ class Menu extends React.Component {
                 opacity: 0.95,
                 color: '#fafafa',
                 transition: 'height 0.3s ease',
-                zIndex: 2,
+                zIndex: 6,
             },
             menuList: {
                 paddingTop: '0rem',
             }
         }
         return (
-            <div style={styles.container}>
+            <div style={styles.container} >
                 {
                     this.state.open ?
                         <div style={styles.menuList}>

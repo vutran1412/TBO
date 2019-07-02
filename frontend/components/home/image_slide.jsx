@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ImageSlide = ({ url }) => {
+export const ImageSlide = ({ movieTitle, url }) => {
     const styles= {
         backgroundImage: `url(${url})`,
         backgroundSize: 'cover',
@@ -8,6 +8,8 @@ export const ImageSlide = ({ url }) => {
     }
 
     return (
-        <div className="image-slide" style={styles}></div>
+        <div className="image-slide" style={styles}>
+            <h1 className="slide-title">{movieTitle}</h1>
+        </div>
     )
 }

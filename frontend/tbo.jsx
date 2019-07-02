@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import configureStore from './store/store'
 import Root from './components/root'
 import { logout } from './actions/session_actions'
+import { fetchMovies, fetchMovie } from './actions/movie_actions'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // TESTING START
     window.getState = store.getState
     window.dispatch = store.dispatch
+    window.fetchMovies = fetchMovies
+    window.fetchMovie = fetchMovie
     window.logout = logout
     
     // TESTING END

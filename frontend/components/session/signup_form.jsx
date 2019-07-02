@@ -43,7 +43,7 @@ class SignUpForm extends React.Component {
         )
     }
 
-    componentDidUnMount() {
+    componentWillUnmount() {
         this.setState({
             first_name: '',
             last_name: '',

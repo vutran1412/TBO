@@ -1,10 +1,12 @@
-html, body, #container, .carousel {
-	height:100%;
-	margin: 0;
-	width: 100%;
+#container, .carousel {
+	max-height:700px;
+	margin: 0 auto;
+	max-width: 90%;
 }
 
-$theme-blue: #14B6D4;
+.carousel:hover {
+	cursor: pointer;
+}
 
 .image-slide {
 	height: 100%;
@@ -12,18 +14,35 @@ $theme-blue: #14B6D4;
 	transition: background-image .3s ease-in-out;
 }
 
-.slide-arrow {
-	color: $theme-blue;
-	cursor: pointer;
-	font-size: 2rem;
+.fa-chevron-left, .fa-chevron-right {
+	color: rgba(245, 238, 238, 0.5);
+	font-size: 5rem;
 	position: fixed;
 	top: 50%;
 }
 
-.slide-arrow.right {
-	right: 1rem;
+.fa-chevron-left:hover {
+	color: azure;
+	cursor: pointer;
 }
 
-.slide-arrow.left {
-	left: 1rem;
+.fa-chevron-right:hover {
+	color: azure;
+	cursor: pointer;
+}
+
+.fa-chevron-right {
+	right: 6rem;
+}
+
+.fa-chevron-left {
+	left: 6rem;
+}
+
+.slide-title {
+	padding-top: 800px;
+    padding-left: 29px;
+    color: white;
+    font-family: "Open sans";
+    font-size: 40px;
 }
