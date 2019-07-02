@@ -30,7 +30,7 @@ gem 'pry-rails'
 gem 'annotate'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
