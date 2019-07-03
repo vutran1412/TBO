@@ -3,4 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     background-color: black;
+    font-family: 'Street 2';
+}
+
+@font-face {
+    font-family: 'Street 2';
+    src: font-url('Street2-Medium.ttf') format('truetype');
 }

@@ -6,11 +6,13 @@ import LoginFormContainer from './session/login_form_container'
 import GreetingContainer from './greeting/greeting_container'
 import HomeContainer from './home/home_container'
 import MovieDisplayContainer from './movie/movie_display_container'
+import MoiveIndexContainer from './movie/movie_index_container'
 
 const App = () => (
     <>
     <GreetingContainer />
         <Switch>
+            <ProtectedRoute exact path="/movies/" component={MoiveIndexContainer} />
             <ProtectedRoute exact path="/movies/:movieId/" component={MovieDisplayContainer} />
             <ProtectedRoute exact path="/home/" component={HomeContainer} />
             <AuthRoute exact path="/signup/" component={SignUpFormContainer} />

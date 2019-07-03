@@ -1,11 +1,12 @@
 import Carousel from './carousel'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
-const mapStateToProps = (ownProps, state) => {
+const mapStateToProps = (state, ownProps) => {
     debugger
     return ({
-        movies: this.state.movies
+        movies: state.entities.movies
     })
 }
 
-export default connect(mapStateToProps, null)(Carousel)
+export default withRouter(connect(mapStateToProps, null)(Carousel))

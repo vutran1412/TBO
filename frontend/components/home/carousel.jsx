@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImageSlide } from './image_slide'
-import { Arrow } from './arrow'
+import { withRouter } from 'react-router-dom'
 
 class Carousel extends React.Component {
     constructor(props) {
@@ -51,4 +51,4 @@ class Carousel extends React.Component {
     }
 }
 
-export default Carousel
+export default withRouter(Carousel)
