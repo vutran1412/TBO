@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class MenuItem extends React.Component {
     constructor(props) {
@@ -35,14 +36,16 @@ class MenuItem extends React.Component {
         }
         return (
             <div style={styles.container}>
-                <div
-                    style={styles.menuItem}
-                    onMouseEnter={() => { this.handleHover(); }}
-                    onMouseLeave={() => { this.handleHover(); }}
-                    onClick={this.props.onClick}
-                >
-                    {this.props.children}
-                </div>
+                <Link to={`/${this.props.name.toLowerCase()}/`}>
+                    <div
+                        style={styles.menuItem}
+                        onMouseEnter={() => { this.handleHover(); }}
+                        onMouseLeave={() => { this.handleHover(); }}
+                        onClick={this.props.onClick}
+                    >
+                        {this.props.children}
+                    </div>
+                </Link>
             </div>
         )
     }

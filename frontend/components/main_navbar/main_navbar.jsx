@@ -74,7 +74,7 @@ class MainNavBar extends React.Component {
                 opacity: 0.9,
                 display: 'grid',
                 gridTemplateColumn: '100px 100px 1fr 1fr 100px',
-                background: 'black',
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
                 width: '100%',
                 color: 'white',
                 fontFamily: 'Open Sans',
@@ -112,6 +112,7 @@ class MainNavBar extends React.Component {
             return (
                 <MenuItem
                     key={index}
+                    name={menu[index]}
                     delay={`${index * 0.1}s`}
                     onClick={() => { this.handleLinkClick(); }}>{val}</MenuItem>)
         });
