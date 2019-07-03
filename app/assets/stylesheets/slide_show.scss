@@ -4,6 +4,7 @@
 	max-width: 100%;
 	display: flex;
 	justify-content: center;
+	position: relative;
 }
 
 .carousel:hover {
@@ -19,7 +20,7 @@
 .fa-chevron-left, .fa-chevron-right {
 	color: rgba(245, 238, 238, 0.5);
 	font-size: 5rem;
-	position: fixed;
+	position: absolute;
 	top: 50%;
 }
 

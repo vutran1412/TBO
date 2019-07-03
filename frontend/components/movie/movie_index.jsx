@@ -1,5 +1,6 @@
 import React from 'react'
 import MovieIndexItem from './movie_index_item'
+import Carousel from '../home/carousel'
 
 class MovieIndex extends React.Component {
 
@@ -36,6 +37,7 @@ class MovieIndex extends React.Component {
                         ROMANCE
                     </button>
                 </div>
+                <Carousel movies={this.props.movies} />
                 <ul className="search-result-lists">{movies}</ul>
             </>
         )

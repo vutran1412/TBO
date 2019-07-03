@@ -18,3 +18,9 @@
 .content-index-button:focus {
     outline: none;
 }
+
+.carousel-index-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
