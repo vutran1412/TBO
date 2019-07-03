@@ -133,7 +133,9 @@ class MainNavBar extends React.Component {
                         </h3>
                     </div>
                     <div style={styles.logo}>
-                        <img className="nav-image nav-resize" src={window.logoImage} />
+                        <Link to="/" replace>
+                            <img className="nav-image nav-resize" src={window.logoImage} />
+                        </Link>
                     </div>
                     <div style={styles.user} id="user-container">
                         <i className="fas fa-user"></i>
