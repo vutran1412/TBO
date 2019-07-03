@@ -20,7 +20,7 @@ module.exports = {
             },
         ]
     },
-    devtool: false, // set to false for production
+    devtool: "inline-source-map", // set to false for production
     resolve: {
         extensions: ['.js', '.jsx', '*']
     }

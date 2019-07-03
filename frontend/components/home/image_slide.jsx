@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export const ImageSlide = ({ movieTitle, url }) => {
+export const ImageSlide = ({ movieTitle, url, movieId }) => {
     const styles= {
         backgroundImage: `url(${url})`,
         backgroundSize: 'cover',
@@ -9,7 +10,9 @@ export const ImageSlide = ({ movieTitle, url }) => {
 
     return (
         <div className="image-slide" style={styles}>
-            <h1 className="slide-title">{movieTitle}</h1>
+            <Link to={`/movies/${movieId}`}>
+                <h1 className="slide-title">{movieTitle}</h1>
+            </Link>
         </div>
     )
 }

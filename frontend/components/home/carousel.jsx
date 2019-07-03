@@ -39,11 +39,12 @@ class Carousel extends React.Component {
     render() {
         const posterUrls = this.props.movies.map(movie => movie.posterUrl)
         const movieTitles = this.props.movies.map(movie => movie.title)
+        const movieIds = this.props.movies.map(movie => movie.id)
         debugger
         return (
             <div className="carousel">
                 <i className="fas fa-chevron-left" onClick={this.previousSlide}></i> 
-                <ImageSlide movieTitle={movieTitles[this.state.currentImageIndex]} url={posterUrls[this.state.currentImageIndex]} />
+                <ImageSlide movieTitle={movieTitles[this.state.currentImageIndex]} url={posterUrls[this.state.currentImageIndex]} movieId={movieIds[this.state.currentImageIndex]}/>
                 <i className="fas fa-chevron-right" onClick={this.nextSlide}></i>
             </div>
         )
