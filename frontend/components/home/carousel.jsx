@@ -8,9 +8,18 @@ class Carousel extends React.Component {
         this.state = {
             currentImageIndex: 0
         }
-
         this.previousSlide = this.previousSlide.bind(this)
         this.nextSlide = this.nextSlide.bind(this)
+    }
+
+    componentDidMount() {
+        this.timerID = setInterval(() => {
+            this.nextSlide()
+        }, 7000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID)
     }
 
 
