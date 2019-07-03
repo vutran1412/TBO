@@ -1,9 +1,16 @@
 import { RECEIVE_ALL_MOVIES, RECEIVE_MOVIE } from '../actions/movie_actions'
+import { RECEIVE_SEARCHED_MOVIES } from '../actions/search_actions'
 import merge from 'lodash/merge'
 
 const moviesReducer = (state = {}, action) => {
     Object.freeze(state)
     switch(action.type) {
+        case RECEIVE_SEARCHED_MOVIES:
+            const searchState = merge({}, state)
+            action.movies.forEach(movie => {
+                searchState[movie.id] = movie
+            })
+            return searchState
         case RECEIVE_ALL_MOVIES:
             const newState = merge({}, state)
             action.movies.forEach(movie => {

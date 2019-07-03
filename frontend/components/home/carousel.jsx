@@ -49,7 +49,6 @@ class Carousel extends React.Component {
         const posterUrls = this.props.movies.map(movie => movie.posterUrl)
         const movieTitles = this.props.movies.map(movie => movie.title)
         const movieIds = this.props.movies.map(movie => movie.id)
-        debugger
         return (
             <div className="carousel">
                 <i className="fas fa-chevron-left" onClick={this.previousSlide}></i> 
