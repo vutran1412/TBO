@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from '../menu/menu'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import MenuItem from '../menu/menu_item'
 import MenuButton from '../menu/menu_button'
 
@@ -45,6 +45,7 @@ class MainNavBar extends React.Component {
 
     handleSearchClick() {
         scrollToTop()
+        return <Redirect to='/search' />
     }
 
     handleClick() {
@@ -127,11 +128,13 @@ class MainNavBar extends React.Component {
                     <Menu open={this.state.menuOpen}>
                         {menuItems}
                     </Menu>
-                    <div style={styles.search} id="search-container">
-                        <i className="fas fa-search"></i>
-                        <h3 className="search-button">
-                            SEARCH
-                        </h3>
+                    <div style={styles.search} id="search-button-container" >
+                        <Link to="/search" className="search-button">
+                            <i className="fas fa-search"></i>
+                            <h3 className="search-title">
+                                SEARCH
+                            </h3>
+                        </Link>
                     </div>
                     <div style={styles.logo}>
                         <Link to="/" replace>
@@ -140,7 +143,7 @@ class MainNavBar extends React.Component {
                     </div>
                     <div style={styles.user} id="user-container">
                         <i className="fas fa-user"></i>
-                        <h3 className="search-button">
+                        <h3 className="user-button">
                             {this.props.currentUser.first_name}
                         </h3>
                     </div>

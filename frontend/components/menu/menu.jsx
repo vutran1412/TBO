@@ -29,9 +29,9 @@ class Menu extends React.Component {
                 flexDirection: 'column',
                 justifySelf: 'center',
                 background: 'black',
-                opacity: 0.95,
+                opacity: 3,
                 color: '#fafafa',
-                transition: 'height 0.3s ease',
+                transition: 'width 0.4s ease',
                 zIndex: 6,
             },
             menuList: {

@@ -24,3 +24,41 @@
     justify-content: flex-start;
     flex-direction: column;
 }
+
+.index-title {
+    margin-left: 66px;
+    margin-top: 60px;
+    padding-bottom: 5px;
+    font-size: 47px; 
+    font-style: normal; 
+    text-decoration: none; 
+    text-transform: none; 
+    line-height: 56px; 
+    letter-spacing: -1.2px; 
+    color: azure;
+    padding-left: 13px;
+}
+
+.index-header {
+    margin-left: 83px;
+    margin-top: 60px;
+    padding-bottom: 5px;
+    font-size: 47px; 
+    font-style: normal; 
+    text-decoration: none; 
+    text-transform: none; 
+    line-height: 56px; 
+    letter-spacing: -1.2px; 
+    color: azure;
+    padding-left: 2px;
+}
+
+.movie-index-list  {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 160px;
+    width: 90%;
+    height: 100%;
+    padding-left: 0px;
+    margin-left: 81px;
+}

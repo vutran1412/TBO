@@ -5,7 +5,9 @@ import Carousel from '../home/carousel'
 class MovieIndex extends React.Component {
     constructor(props) {
         super(props)
-
+        this.state = {
+            movies: this.props.movies
+        }
         this.shuffle = this.shuffle.bind(this)
     }
 
@@ -26,6 +28,9 @@ class MovieIndex extends React.Component {
         return array
     }
 
+    componentWillUnmount() {
+        this.props.clearMovies()
+    }
    
 
     render() {
@@ -38,7 +43,7 @@ class MovieIndex extends React.Component {
         movies = this.shuffle(movies)
         return (
             <>
-                <div className="index-header">
+                <div className="index-title">
                     <span>Movies</span>
                 </div>
                 <div className="index-header">
@@ -59,7 +64,7 @@ class MovieIndex extends React.Component {
                     </button>
                 </div>
                 <Carousel movies={this.shuffle(this.props.movies)} />
-                <ul className="search-result-lists">{movies}</ul>
+                <ul className="movie-index-list">{movies}</ul>
             </>
         )
     }

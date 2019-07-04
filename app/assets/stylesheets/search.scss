@@ -10,13 +10,20 @@
 }
 
 .search-button {
+    display: flex;
     font-size: 18px;
-    margin-top: 13px;
+    padding-top: 0px;
+    margin-top: -4px;
 }
 
 .search-button:hover {
     color: azure;
     cursor: pointer;
+}
+
+.search-title {
+    padding-top: 0px;
+    margin-top: 13px;
 }
 
 #search-container {
@@ -25,14 +32,18 @@
     padding-left: 0px;
 }
 
+#search-button-container {
+    margin-top: 0px;
+}
+
 .search-result-lists {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 190px;
+    margin-top: 40px;
     width: 90%;
     height: 100%;
-    padding-left: 30px;
-    margin-left: 62px;
+    padding-left: 0px;
+    margin-left: 0px;
 }
 
 .index-navbar {
@@ -74,16 +85,33 @@
     padding-top: 20px;
 }
 
-.index-header {
-    margin-left: 88px;
-    margin-top: 50px;
-    padding-bottom: 5px;
-    font-size: 47px; 
+
+
+.search-container {
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.search-input {
+    border: 0px; 
+    padding: 0px 40px 3px 10px; 
+    font-size: 15px; 
     font-style: normal; 
     text-decoration: none; 
     text-transform: none; 
-    line-height: 56px; 
-    letter-spacing: -1.2px; 
-    color: azure;
-    padding-left: 30px;
+    line-height: 19px; 
+    letter-spacing: 0px; 
+    color: rgb(15, 15, 15); 
+    box-sizing: border-box; 
+    width: 500px; 
+    height: 31px; 
+    background-color: rgb(240, 240, 240);
+    border: none;
+}
+
+
+
+.section {
+    margin-top: 30px;
+    margin-left: 55px;
 }
