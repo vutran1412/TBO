@@ -1,3 +1,1 @@
-// export const getAllMovieThumbnailUrls = ({ movies }) => (
-
-// )
+export 

@@ -1,18 +1,33 @@
 import React from 'react'
 import MovieIndexItem from './movie_index_item'
 import Carousel from '../home/carousel'
+import ActionIndex from './action_index'
 
 class MovieIndex extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            movies: this.props.movies
+            movies: this.props.movies,
+            isAction: false,
+            isComedy: false,
+            isDrama: false,
+            isRomance: false
         }
         this.shuffle = this.shuffle.bind(this)
+        this.handleActionClick = this.handleActionClick.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchMovies()
+    }
+
+    handleActionClick() {
+        this.setState({
+            isAction: true,
+            isComedy: false,
+            isDrama: false,
+            isRomance: false
+        })
     }
 
     shuffle(array) {
@@ -34,6 +49,7 @@ class MovieIndex extends React.Component {
    
 
     render() {
+        debugger
         let movies = this.props.movies.map( movie => (
             <MovieIndexItem
                 key={movie.title}
@@ -41,6 +57,8 @@ class MovieIndex extends React.Component {
             />
         ))
         movies = this.shuffle(movies)
+        let movieIndex = this.state.isAction ? <ActionIndex movies={movies} /> : <Carousel movies={this.shuffle(this.props.movies)} />
+        
         return (
             <>
                 <div className="index-title">
@@ -50,7 +68,7 @@ class MovieIndex extends React.Component {
                     <button className="content-index-button">
                         ALL
                     </button>
-                    <button className="content-index-button">
+                    <button className="content-index-button" onClick={this.handleActionClick}>
                         ACTION
                     </button>
                     <button className="content-index-button">
@@ -63,7 +81,7 @@ class MovieIndex extends React.Component {
                         ROMANCE
                     </button>
                 </div>
-                <Carousel movies={this.shuffle(this.props.movies)} />
+                {movieIndex}
                 <ul className="movie-index-list">{movies}</ul>
             </>
         )
