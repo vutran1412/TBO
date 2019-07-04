@@ -14,6 +14,9 @@ class Search extends React.Component {
         
     }
 
+    componentDidMount() {
+        this.props.clearMovies()
+    }
     
     handleChange(e) {
         this.getAutoCompleResults(e)
@@ -37,7 +40,7 @@ class Search extends React.Component {
             return <MovieIndexItem key={index} movie={response}/>
         })
         autoCompleteList = this.state.searchTerm === "" ? <div></div> : autoCompleteList
-        const resultString = autoCompleteList.length >= 2 ? 'results' : 'result'
+        const resultString = autoCompleteList.length >= 1 ? 'results' : 'result'
         return (
             <div className="search-container">
                 <section className="section">
@@ -47,7 +50,7 @@ class Search extends React.Component {
                         onChange={(e)=> this.handleChange(e)}
                         value={this.state.searchTerm}
                         placeholder="Search series or movies..." />
-                    <h1 className="search-result-counter" >{autoCompleteList.length} {resultString}</h1>
+                    <h1 className="search-result-counter" >{autoCompleteList.length > 0 ? autoCompleteList.length : ''} {autoCompleteList.length > 0 ? resultString : <div></div>}</h1>
                     <ul className="search-result-lists">
                         {autoCompleteList}
                     </ul>

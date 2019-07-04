@@ -1,34 +1,23 @@
 import React from 'react'
 import MovieIndexItem from './movie_index_item'
+import MovieNavBar from './movie_navbar'
 import Carousel from '../home/carousel'
-import ActionIndex from './action_index'
+import { Link } from 'react-router-dom'
 
 class MovieIndex extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            movies: this.props.movies,
-            isAction: false,
-            isComedy: false,
-            isDrama: false,
-            isRomance: false
+            movies: this.props.movies
         }
         this.shuffle = this.shuffle.bind(this)
-        this.handleActionClick = this.handleActionClick.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchMovies()
     }
 
-    handleActionClick() {
-        this.setState({
-            isAction: true,
-            isComedy: false,
-            isDrama: false,
-            isRomance: false
-        })
-    }
+    
 
     shuffle(array) {
         var currentIndex = array.length
@@ -42,46 +31,20 @@ class MovieIndex extends React.Component {
         }
         return array
     }
-
-    componentWillUnmount() {
-        this.props.clearMovies()
-    }
    
-
     render() {
-        debugger
-        let movies = this.props.movies.map( movie => (
+        let movies
+        movies = this.props.movies.map(movie => (
             <MovieIndexItem
                 key={movie.title}
                 movie={movie}
             />
         ))
         movies = this.shuffle(movies)
-        let movieIndex = this.state.isAction ? <ActionIndex movies={movies} /> : <Carousel movies={this.shuffle(this.props.movies)} />
-        
         return (
             <>
-                <div className="index-title">
-                    <span>Movies</span>
-                </div>
-                <div className="index-header">
-                    <button className="content-index-button">
-                        ALL
-                    </button>
-                    <button className="content-index-button" onClick={this.handleActionClick}>
-                        ACTION
-                    </button>
-                    <button className="content-index-button">
-                        COMEDY
-                    </button>
-                    <button className="content-index-button">
-                        DRAMA
-                    </button>
-                    <button className="content-index-button">
-                        ROMANCE
-                    </button>
-                </div>
-                {movieIndex}
+                <MovieNavBar />
+                <Carousel movies={this.shuffle(this.props.movies)} />
                 <ul className="movie-index-list">{movies}</ul>
             </>
         )

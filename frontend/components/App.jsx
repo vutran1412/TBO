@@ -8,11 +8,16 @@ import HomeContainer from './home/home_container'
 import MovieDisplayContainer from './movie/movie_display_container'
 import MovieIndexContainer from './movie/movie_index_container'
 import SearchContainer from './search/search_container'
+import ActionIndexContainer from './movie/action_index_container'
+// import ComedyIndexContainer from './movie/comedy_index_container'
+
 
 const App = () => (
     <>
     <GreetingContainer />
         <Switch>
+            <ProtectedRoute exact path="/action" component={ActionIndexContainer} />
+            {/* <ProtectedRoute exact path="/comedy" component={ComedyIndexContainer} /> */}
             <ProtectedRoute exact path="/search/" component={SearchContainer} />
             <ProtectedRoute exact path="/movies/" component={MovieIndexContainer} />
             <ProtectedRoute exact path="/movies/:movieId/" component={MovieDisplayContainer} />

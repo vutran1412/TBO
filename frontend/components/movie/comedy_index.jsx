@@ -2,10 +2,10 @@ import React from 'react'
 import MovieIndexItem from './movie_index_item'
 import MovieNavBar from './movie_navbar'
 
-class ActionIndex extends React.Component {
+class ComedyIndex extends React.Component {
     constructor(props) {
         super(props)
-        
+
     }
 
     componentDidMount() {
@@ -13,16 +13,16 @@ class ActionIndex extends React.Component {
     }
 
     render() {
-        let actionMovies = this.props.actionMovies.map(movie => {
+        let comedyMovies = this.props.comedyMovies.map(movie => {
             return <MovieIndexItem movie={movie} key={movie.title} />
         })
         return (
             <>
-                <MovieNavBar genre="Action"/>
-                <ul className="movie-index-list">{actionMovies}</ul>
+                <MovieNavBar genre="Action" />
+                <ul className="movie-index-list">{comedyMovies}</ul>
             </>
         )
     }
 }
 
-export default ActionIndex
+export default ComedyIndex

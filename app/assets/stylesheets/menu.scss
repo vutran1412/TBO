@@ -50,8 +50,9 @@
 }
 
 .browse-button {
-  font-size: 18px;
+  font-size: 21px;
   margin-top: 13px;
+  font-family: 'Street 2';
 }
 
 .browse-button:hover {
@@ -59,10 +60,13 @@
   cursor: pointer;
 }
 
+
+
 #browse-bar {
-  font-size: 18px;
+  font-size: 22px;
   padding-top: 18px;
   padding-right: 15px;
+  
 }
 
 #browse-bar:hover {

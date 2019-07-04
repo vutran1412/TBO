@@ -1,4 +1,5 @@
 import { searchMovies } from '../../actions/search_actions'
+import { clearMovies } from '../../actions/movie_actions'
 import Search from './search'
 import { connect } from 'react-redux'
 
@@ -11,6 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return ({
         searchMovies: term => dispatch(searchMovies(term)),
+        clearMovies: () => dispatch(clearMovies())
     })
 }
 

@@ -163,7 +163,7 @@ macgruber = Movie.create!({
 
 margincall = Movie.create!({
     title: "Margin Call",
-    genre: "Comedy",
+    genre: "Drama",
     audio: 5.1,
     format: "HD",
     year: 2011,

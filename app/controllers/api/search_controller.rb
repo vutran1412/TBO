@@ -4,7 +4,6 @@ class Api::SearchController < ApplicationController
     end
 
     def search
-        @search = Movie.ransack(title_cont: params[:q])
-        @movies = @search.result(distinct: true).order('title ASC')
+        @movies = Movie.ransack(title_cont: params[:q]).result(distinct: true)
     end
 end
