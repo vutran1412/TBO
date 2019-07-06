@@ -15,7 +15,7 @@ class DramaIndex extends React.Component {
         return (
             <>
                 <MovieNavBar genre="Drama" />
-                <ul className="movie-index-list">{dramaMovies}</ul>
+                <ul id="drama-index">{dramaMovies}</ul>
             </>
         )
     }

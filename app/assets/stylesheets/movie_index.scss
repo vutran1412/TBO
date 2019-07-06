@@ -62,3 +62,13 @@
     padding-left: 0px;
     margin-left: 81px;
 }
+
+#action-index, #comedy-index, #drama-index, #romance-index {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 17px;
+    width: 90%;
+    height: 100%;
+    padding-left: 0px;
+    margin-left: 81px;
+}

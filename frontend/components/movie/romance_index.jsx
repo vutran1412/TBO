@@ -16,7 +16,7 @@ class RomanceIndex extends React.Component {
         return (
             <>
                 <MovieNavBar genre="Romance" />
-                <ul className="movie-index-list">{romanceMovies}</ul>
+                <ul id="romance-index">{romanceMovies}</ul>
             </>
         )
     }

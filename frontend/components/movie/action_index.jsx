@@ -19,7 +19,7 @@ class ActionIndex extends React.Component {
         return (
             <>
                 <MovieNavBar genre="Action"/>
-                <ul className="movie-index-list">{actionMovies}</ul>
+                <ul id="action-index">{actionMovies}</ul>
             </>
         )
     }
