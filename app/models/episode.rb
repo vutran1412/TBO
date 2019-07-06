@@ -18,7 +18,7 @@ class Episode < ApplicationRecord
     validates :title, :description, :year, :length, :episode_number, :season_number, :series_id, presence: true
     validates :title, uniqueness: true
 
-    belongs_to :series, :foreign_key: :series_id, class_name: :Series
+    belongs_to :series, foreign_key: :series_id, class_name: :Series
 
     has_one_attached :thumbnail
     has_one_attached :poster
