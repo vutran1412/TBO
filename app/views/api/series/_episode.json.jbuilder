@@ -1,0 +1,1 @@
+json.extract! episode, :id, :title, :description, :length, :year, :episode_number, :season_number, :series_id

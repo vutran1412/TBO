@@ -5,7 +5,7 @@ export const ImageSlide = ({ movieTitle, url, movieId }) => {
     const styles= {
         backgroundImage: `url(${url})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center top'
     }
 
     return (

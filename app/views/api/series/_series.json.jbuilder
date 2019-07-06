@@ -1,0 +1,1 @@
+json.extract! series, :id, :title, :description, :rating, :audio, :format

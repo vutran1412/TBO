@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_172546) do
+ActiveRecord::Schema.define(version: 2019_07_06_070049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,22 @@ ActiveRecord::Schema.define(version: 2019_06_25_172546) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "episodes", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "series_id", null: false
+    t.text "description", null: false
+    t.string "length", null: false
+    t.integer "episode_number", null: false
+    t.integer "season_number", null: false
+    t.integer "year", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["episode_number"], name: "index_episodes_on_episode_number"
+    t.index ["season_number"], name: "index_episodes_on_season_number"
+    t.index ["series_id"], name: "index_episodes_on_series_id"
+    t.index ["title"], name: "index_episodes_on_title"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "genre"
@@ -47,6 +63,17 @@ ActiveRecord::Schema.define(version: 2019_06_25_172546) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "series", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "rating"
+    t.float "audio"
+    t.string "format"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_series_on_title"
   end
 
   create_table "users", force: :cascade do |t|
