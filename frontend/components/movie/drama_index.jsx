@@ -2,23 +2,23 @@ import React from 'react'
 import MovieIndexItem from './movie_index_item'
 import MovieNavBar from './movie_navbar'
 
-class ComedyIndex extends React.Component {
+class DramaIndex extends React.Component {
 
-    componentDidMount() {
+    componenttDidMount() {
         this.props.fetchMovies()
     }
 
     render() {
-        let comedyMovies = this.props.comedyMovies.map(movie => {
+        let dramaMovies = this.props.dramaMovies.map(movie => {
             return <MovieIndexItem movie={movie} key={movie.title} />
         })
         return (
             <>
-                <MovieNavBar genre="Comedy" />
-                <ul className="movie-index-list">{comedyMovies}</ul>
+                <MovieNavBar genre="Drama" />
+                <ul className="movie-index-list">{dramaMovies}</ul>
             </>
         )
     }
 }
 
-export default ComedyIndex
+export default DramaIndex

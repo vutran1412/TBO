@@ -18,7 +18,7 @@ const moviesReducer = (state = {}, action) => {
             })
             return newState
         case RECEIVE_MOVIE:
-            return merge({}, state, { [action.movie.id]:action.movie })
+            return merge({}, state, { [action.movie.id]: action.movie })
         case CLEAR_MOVIES:
             return {}
         default:

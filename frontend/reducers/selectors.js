@@ -19,6 +19,7 @@ export const getComedyMovies = ({ movies }) => {
             comedyMovies.push(movies[id])
         }
     }
+    return comedyMovies
 }
 
 export const getDramaMovies = ({ movies }) => {
@@ -28,5 +29,16 @@ export const getDramaMovies = ({ movies }) => {
             dramaMovies.push(movies[id])
         }
     }
+    return dramaMovies
+}
+
+export const getRomanceMovies = ({ movies }) => {
+    let romanceMovies = []
+    for (let id in movies) {
+        if (movies[id].genre === "Romance") {
+            romanceMovies.push(movies[id])
+        }
+    }
+    return romanceMovies
 }
 

@@ -9,15 +9,18 @@ import MovieDisplayContainer from './movie/movie_display_container'
 import MovieIndexContainer from './movie/movie_index_container'
 import SearchContainer from './search/search_container'
 import ActionIndexContainer from './movie/action_index_container'
-// import ComedyIndexContainer from './movie/comedy_index_container'
-
+import ComedyIndexContainer from './movie/comedy_index_container'
+import DramaIndexContainer from './movie/drama_index_container'
+import RomanceIndexContainer from './movie/romance_index_container'
 
 const App = () => (
     <>
     <GreetingContainer />
         <Switch>
-            <ProtectedRoute exact path="/action" component={ActionIndexContainer} />
-            {/* <ProtectedRoute exact path="/comedy" component={ComedyIndexContainer} /> */}
+            <ProtectedRoute exact path="/movies/action" component={ActionIndexContainer} />
+            <ProtectedRoute exact path="/movies/comedy" component={ComedyIndexContainer} />
+            <ProtectedRoute exact path="/movies/drama" component={DramaIndexContainer} />
+            <ProtectedRoute exact path="/movies/romance" component={RomanceIndexContainer} />
             <ProtectedRoute exact path="/search/" component={SearchContainer} />
             <ProtectedRoute exact path="/movies/" component={MovieIndexContainer} />
             <ProtectedRoute exact path="/movies/:movieId/" component={MovieDisplayContainer} />

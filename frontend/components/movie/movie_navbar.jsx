@@ -10,26 +10,31 @@ const MovieNavBar = ({  genre }) => {
             </div>
             <div className="index-header">
                 <button className="content-index-button">
-                    <Link to="/movies/">
+                    <Link to="/movies">
                         ALL
                     </Link>
                 </button>
                 <button className="content-index-button">
-                    <Link to="/action">
+                    <Link to="/movies/action">
                         ACTION
                     </Link>
                 </button>
                 <button className="content-index-button">
-                    <Link to="/comedy">
+                    <Link to="/movies/comedy">
                         COMEDY
                     </Link>
                 </button>
                 <button className="content-index-button">
-                    DRAMA
-                        </button>
+                    <Link to="/movies/drama">
+                        DRAMA
+                    
+                    </Link>
+                </button>
                 <button className="content-index-button">
-                    ROMANCE
-                        </button>
+                    <Link to="/movies/romance">
+                        ROMANCE
+                    </Link>
+                </button>
             </div>
         </>
     )

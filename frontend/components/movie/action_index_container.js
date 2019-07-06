@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { getActionMovies } from '../../reducers/selectors'
 import { withRouter } from 'react-router-dom'
-import { fetchMovies } from '../../actions/movie_actions'
+import { fetchMovies, clearMovies } from '../../actions/movie_actions'
 import ActionIndex from './action_index'
 
 const mapStateToProps = (state) => {
@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return({
-        fetchMovies: () => dispatch(fetchMovies())
+        fetchMovies: () => dispatch(fetchMovies()),
+        
     })
 }
 

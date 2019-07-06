@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
-import { getComedyMovies } from '../../reducers/selectors'
+import { getRomanceMovies } from '../../reducers/selectors'
 import { withRouter } from 'react-router-dom'
 import { fetchMovies } from '../../actions/movie_actions'
-import ComedyIndex from './comedy_index'
+import RomanceIndex from './romance_index'
 
 const mapStateToProps = (state) => {
     return ({
-        comedyMovies: getComedyMovies(state.entities)
+        romanceMovies: getRomanceMovies(state.entities)
     })
 }
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => {
     })
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ComedyIndex))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RomanceIndex))
