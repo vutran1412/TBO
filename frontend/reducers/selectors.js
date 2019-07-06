@@ -2,6 +2,10 @@ export const getAllMovies = ({ movies }) => (
     Object.keys(movies).map(id => movies[id])
 )
 
+export const getAllSeries = ({ series }) => (
+    Object.keys(series).map(id => series[id])
+)
+
 export const getActionMovies = ({ movies }) => {
     let actionMovies = []
     for (let id in movies) {
@@ -41,4 +45,6 @@ export const getRomanceMovies = ({ movies }) => {
     }
     return romanceMovies
 }
+
+
 

@@ -12,6 +12,7 @@ import ActionIndexContainer from './movie/action_index_container'
 import ComedyIndexContainer from './movie/comedy_index_container'
 import DramaIndexContainer from './movie/drama_index_container'
 import RomanceIndexContainer from './movie/romance_index_container'
+import SeriesIndexContainer from './series/series_index_container'
 
 const App = () => (
     <>
@@ -21,6 +22,7 @@ const App = () => (
             <ProtectedRoute exact path="/movies/comedy" component={ComedyIndexContainer} />
             <ProtectedRoute exact path="/movies/drama" component={DramaIndexContainer} />
             <ProtectedRoute exact path="/movies/romance" component={RomanceIndexContainer} />
+            <ProtectedRoute exact path="/series" component={SeriesIndexContainer} />
             <ProtectedRoute exact path="/search/" component={SearchContainer} />
             <ProtectedRoute exact path="/movies/" component={MovieIndexContainer} />
             <ProtectedRoute exact path="/movies/:movieId/" component={MovieDisplayContainer} />

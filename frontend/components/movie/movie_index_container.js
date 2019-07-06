@@ -3,7 +3,7 @@ import MovieIndex from './movie_index'
 import { clearMovies } from '../../actions/movie_actions'
 import { fetchMovies } from '../../actions/movie_actions'
 import { withRouter } from 'react-router-dom'
-import { getAllMovies, getActionMovies, getComedyMovies } from '../../reducers/selectors'
+import { getAllMovies } from '../../reducers/selectors'
 
 const mapStateToProps = state => {
     return ({
