@@ -46,7 +46,6 @@ class Search extends React.Component {
             }
         })
         autoCompleteList = movies.concat(shows)
-        debugger
         autoCompleteList = this.state.searchTerm === "" ? <div></div> : autoCompleteList
         const resultString = autoCompleteList.length >= 1 ? 'results' : 'result'
         return (
