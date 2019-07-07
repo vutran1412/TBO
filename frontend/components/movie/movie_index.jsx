@@ -14,10 +14,9 @@ class MovieIndex extends React.Component {
     }
 
     componentDidMount() {
+        this.props.clearSeries()
         this.props.fetchMovies()
     }
-
-    
 
     shuffle(array) {
         var currentIndex = array.length

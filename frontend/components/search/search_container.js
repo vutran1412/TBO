@@ -1,18 +1,26 @@
-import { searchMovies } from '../../actions/search_actions'
+import { search } from '../../actions/search_actions'
 import { clearMovies } from '../../actions/movie_actions'
+import { clearSeries } from '../../actions/series_actions'
+import { getAllSearchRes } from '../../reducers/selectors'
 import Search from './search'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return ({
-        movies: state.entities.movies
+        searchRes: getAllSearchRes(state.ui)
     })
+}
+
+function filterSearchRes() {
+    
 }
 
 const mapDispatchToProps = dispatch => {
     return ({
-        searchMovies: term => dispatch(searchMovies(term)),
-        clearMovies: () => dispatch(clearMovies())
+        search: term => dispatch(search(term)),
+        clearMovies: () => dispatch(clearMovies()),
+        clearSeries: () => dispatch(clearSeries())
+        
     })
 }
 

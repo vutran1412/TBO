@@ -4,7 +4,7 @@ import configureStore from './store/store'
 import Root from './components/root'
 import { logout } from './actions/session_actions'
 import { fetchMovies, fetchMovie } from './actions/movie_actions'
-import { searchMovies } from './actions/search_actions'
+import { search } from './actions/search_actions'
 import { fetchAllSeries, fetchSeries } from './actions/series_actions'
 
 
@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.dispatch = store.dispatch
     window.fetchMovies = fetchMovies
     window.fetchMovie = fetchMovie
-    window.searchMovies = searchMovies
     window.fetchAllSeries = fetchAllSeries
     window.fetchSeries = fetchSeries
+    window.search = search
     window.logout = logout
     
     // TESTING END

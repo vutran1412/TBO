@@ -13,6 +13,7 @@ class SeriesIndex extends React.Component {
     }
 
     componentDidMount() {
+        this.props.clearMovies()
         this.props.fetchAllSeries()
     }
 

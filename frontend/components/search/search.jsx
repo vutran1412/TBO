@@ -1,14 +1,13 @@
 import React from 'react'
 import MovieIndexItem from '../movie/movie_index_item'
+import SeriesIndexItem from '../series/series_index_item'
 
 class Search extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             searchTerm: '',
-            autoCompleteResults: [],
-            itemSelected: {},
-            showItemSelected: false
+            autoCompleteResults: []
         }
         this.getAutoCompleResults = this.getAutoCompleResults.bind(this)
         
@@ -16,29 +15,38 @@ class Search extends React.Component {
 
     componentDidMount() {
         this.props.clearMovies()
+        this.props.clearSeries()
     }
     
     handleChange(e) {
         this.getAutoCompleResults(e)
     }
-  
 
     getAutoCompleResults(e) {
         this.setState({
             searchTerm: e.target.value
         }, () => {
-            this.props.searchMovies(this.state.searchTerm)
+            this.props.search(this.state.searchTerm)
             .then(response => this.setState({
-                autoCompleteResults: response.movies
+                autoCompleteResults: response.search
             }))
         })
     }
 
 
     render() {
-        let autoCompleteList = this.state.autoCompleteResults.map((response, index) => {
-            return <MovieIndexItem key={index} movie={response}/>
+        let autoCompleteList
+        let movies = []
+        let shows = []
+        this.props.searchRes.forEach((search, i) => {
+            if (search.rating.split("-")[0] === "TV") {
+                shows.push(<SeriesIndexItem key={search.title} show={search} />)
+            } else {
+                movies.push(<MovieIndexItem key={search.title} movie={search} />)
+            }
         })
+        autoCompleteList = movies.concat(shows)
+        debugger
         autoCompleteList = this.state.searchTerm === "" ? <div></div> : autoCompleteList
         const resultString = autoCompleteList.length >= 1 ? 'results' : 'result'
         return (
