@@ -7,7 +7,7 @@ export const getAllSeries = ({ series }) => (
 )
 
 export const getAllSearchRes = ({ search }) => (
-    Object.keys(search).map(title => search[title])
+    Object.keys(search).map(id => search[id])
 )
 
 

@@ -19,6 +19,7 @@ class Search extends React.Component {
     }
     
     handleChange(e) {
+        this.props.clearSearchResults()
         this.getAutoCompleResults(e)
     }
 
