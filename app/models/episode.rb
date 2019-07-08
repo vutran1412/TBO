@@ -4,7 +4,7 @@
 #
 #  id             :bigint           not null, primary key
 #  title          :string           not null
-#  series_id      :string           not null
+#  series_id      :integer          not null
 #  description    :text             not null
 #  length         :string           not null
 #  episode_number :integer          not null

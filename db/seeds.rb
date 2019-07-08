@@ -49,6 +49,30 @@
 #     format: "HD"
 # )
 
+# Table name: episodes
+#
+#  id             :bigint           not null, primary key
+#  title          :string           not null
+#  series_id      :integer          not null
+#  description    :text             not null
+#  length         :string           not null
+#  episode_number :integer          not null
+#  season_number  :integer          not null
+#  year           :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Episode.create!(
+#     title: "",
+#     series_id: ,
+#     description: "",
+#     length: "",
+#     episode_number: ,
+#     season_number: ,
+#     year: ,
+# )
+
 require "open-uri"
 # User.destroy_all
 # Movie.destroy_all
@@ -112,76 +136,111 @@ require "open-uri"
 
 # <---------------------------------- Series aws urls ----------------------------------------------->
 
-SERIES_THUMBNAILS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld.jpeg"
-]
+# SERIES_THUMBNAILS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld.jpeg"
+# ]
 
-SERIES_POSTERS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballersposter.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothersposter.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barryposter.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobylposter.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworldposter.jpeg"
-]
+# SERIES_POSTERS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballersposter.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothersposter.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barryposter.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobylposter.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworldposter.jpeg"
+# ]
 
-def attach_series(content, thumbnail_url, poster_url)
-    content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
-    content.poster.attach(io: open(poster_url), filename: "#{content.title.split.join}poster.jpeg")
-end
+# def attach_series(content, thumbnail_url, poster_url)
+#     content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
+#     content.poster.attach(io: open(poster_url), filename: "#{content.title.split.join}poster.jpeg")
+# end
 
 # <-------------------------- Seed Series ------------------------------------------->
 
-ballers = Series.create!(
-    title: "Ballers",
-    description: "The sun-soaked world of a group of past and present football players in and around Miami, FL is the setting for this half-hour HBO comedy series. Dwayne 'The Rock' Johnson stars as a retired superstar who is trying to find a foothold as a financial manager to current players as they navigate life off the field.",
-    rating: "TV-MA",
-    audio: 5.1,
-    format: "HD"
+# ballers = Series.create!(
+#     title: "Ballers",
+#     description: "The sun-soaked world of a group of past and present football players in and around Miami, FL is the setting for this half-hour HBO comedy series. Dwayne 'The Rock' Johnson stars as a retired superstar who is trying to find a foothold as a financial manager to current players as they navigate life off the field.",
+#     rating: "TV-MA",
+#     audio: 5.1,
+#     format: "HD"
+# )
+
+# bandofbros = Series.create!(
+#     title: "Band of Brothers",
+#     description: "They were ordinary men, swept up in the most extraordinary conflict in history. This landmark ten-part miniseries based on Stephen E. Ambrose's best-seller recounts the remarkable achievements of an elite team of U.S. paratroopers whose World War II exploits are as incredible as they are true.",
+#     rating: "TV-MA",
+#     audio: 5.1,
+#     format: "HD"
+# )
+
+
+# barry = Series.create!(
+#     title: "Barry",
+#     description: "A dark comedy starring Bill Hader (\"Saturday Night Live\"), who created and executive produced the series along with Alec Berg (HBO's \"Silicon Valley\"), Barry focuses on a depressed, low-rent hitman from the Midwest (Hader, in the title role) who falls in love with acting while on a job in LA. The supporting cast features Stephen Root, Henry Winkler and Sarah Goldberg.",
+#     rating: "TV-MA",
+#     audio: 5.1,
+#     format: "HD"
+# )
+# chernobyl = Series.create!(
+#     title: "Chernobyl",
+#     description: "On April 26, 1986, the Chernobyl Nuclear Power Plant in the Soviet Union suffered a massive explosion. This gripping five-part miniseries tells the powerful and visceral story of the worst man-made accident in history, following the tragedy from the moment of the early-morning explosion through the chaos and loss of life in the ensuing days, weeks and months.",
+#     rating: "TV-MA",
+#     audio: 5.1,
+#     format: "HD"
+# )
+# westworld = Series.create!(
+#     title: "Westworld",
+#     description: "In this series set in a futuristic Wild West fantasy park, a group of android 'hosts' deviate from their programmers' carefully planned scripts in a disturbing pattern of aberrant behavior. With an exceptional cast headed by Anthony Hopkins, Ed Harris, Evan Rachel Wood, James Marsden, Thandie Newton and Jeffrey Wright, 'Westworld' was inspired by Michael Crichton's 1973 film.",
+#     rating: "TV-MA",
+#     audio: 5.1,
+#     format: "HD"
+# )
+
+# SERIES = [ballers, bandofbros, barry, chernobyl, westworld]
+
+# SERIES.each_with_index do |series, i|
+#     attach_series(series, SERIES_THUMBNAILS[i], SERIES_POSTERS[i])
+# end
+
+
+
+# <------------------------------ Barry Episodes aws urls --------------------------------->
+
+BARRY_THUMBNAIL = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry1.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry2.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry3.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry4.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry5.jpeg"
+]
+
+BARRY_POSTER = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry1poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry2poster.jpg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry3poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry4poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/barry/barry5poster.jpeg"
+]
+
+BARRY_VIDEO = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/barry/Barry+Official+Season+1+Trailer+%5BHBO+NOW%5D.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/barry/Barry+1x02+Promo+Use+It+(HD)+Bill+Hader+HBO+series.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/barry/Barry+1x03+Promo+Make+the+Unsafe+Choice+(HD)+Bill+Hader+HBO+series.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/barry/Barry+1x04+Promo+Commit...To+YOU+(HD)+Bill+Hader+HBO+series.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/barry/Barry+1x05+Promo+Do+Your+Job+(HD)+Bill+Hader+HBO+series.mp4"
+]
+
+Episode.create!(
+    title: "",
+    series_id: ,
+    description: "",
+    length: "",
+    episode_number: ,
+    season_number: ,
+    year: ,
 )
-
-bandofbros = Series.create!(
-    title: "Band of Brothers",
-    description: "They were ordinary men, swept up in the most extraordinary conflict in history. This landmark ten-part miniseries based on Stephen E. Ambrose's best-seller recounts the remarkable achievements of an elite team of U.S. paratroopers whose World War II exploits are as incredible as they are true.",
-    rating: "TV-MA",
-    audio: 5.1,
-    format: "HD"
-)
-
-
-barry = Series.create!(
-    title: "Barry",
-    description: "A dark comedy starring Bill Hader (\"Saturday Night Live\"), who created and executive produced the series along with Alec Berg (HBO's \"Silicon Valley\"), Barry focuses on a depressed, low-rent hitman from the Midwest (Hader, in the title role) who falls in love with acting while on a job in LA. The supporting cast features Stephen Root, Henry Winkler and Sarah Goldberg.",
-    rating: "TV-MA",
-    audio: 5.1,
-    format: "HD"
-)
-chernobyl = Series.create!(
-    title: "Chernobyl",
-    description: "On April 26, 1986, the Chernobyl Nuclear Power Plant in the Soviet Union suffered a massive explosion. This gripping five-part miniseries tells the powerful and visceral story of the worst man-made accident in history, following the tragedy from the moment of the early-morning explosion through the chaos and loss of life in the ensuing days, weeks and months.",
-    rating: "TV-MA",
-    audio: 5.1,
-    format: "HD"
-)
-westworld = Series.create!(
-    title: "Westworld",
-    description: "In this series set in a futuristic Wild West fantasy park, a group of android 'hosts' deviate from their programmers' carefully planned scripts in a disturbing pattern of aberrant behavior. With an exceptional cast headed by Anthony Hopkins, Ed Harris, Evan Rachel Wood, James Marsden, Thandie Newton and Jeffrey Wright, 'Westworld' was inspired by Michael Crichton's 1973 film.",
-    rating: "TV-MA",
-    audio: 5.1,
-    format: "HD"
-)
-
-SERIES = [ballers, bandofbros, barry, chernobyl, westworld]
-
-SERIES.each_with_index do |series, i|
-    attach_series(series, SERIES_THUMBNAILS[i], SERIES_POSTERS[i])
-end
-
-
-
 
 # # <---------- Function to attach movie assets --------------------------------------->
 
