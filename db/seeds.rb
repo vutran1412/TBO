@@ -232,24 +232,71 @@ BARRY_VIDEO = [
     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/barry/Barry+1x05+Promo+Do+Your+Job+(HD)+Bill+Hader+HBO+series.mp4"
 ]
 
-Episode.create!(
-    title: "",
-    series_id: ,
-    description: "",
-    length: "",
-    episode_number: ,
-    season_number: ,
-    year: ,
+barry = Series.find_by(title: "Barry")
+
+barry1 = Episode.create!(
+    title: "Ep 1 Chapter One: Make Your Mark",
+    series_id: barry.id,
+    description: "Series premiere. Barry (Bill Hader) is a disillusioned Midwesterner who became a hitman at the urging of Monroe Fuches, an old friend who's become his handler. Sent to LA to kill a young actor, Barry accidentally interrupts an acting class and gets bitten by the acting bug as he bonds with teacher/guru Gene Cousineau and his students, including a pretty girl named Sally Reed.",
+    length: "34 min",
+    episode_number: 1,
+    season_number: 1,
+    year: 2018,
 )
+
+barry2 = Episode.create!(
+    title: "Ep 2 Chapter Two: Use It",
+    series_id: barry.id,
+    description: "In the wake of some shocking news, Gene encourages his class to channel their feelings into their work. Resolved to quit his job and put the past behind him, Barry tries not to get pulled back in by Fuches and the Chechens. Sally tries to crack the nut that is Barry.",
+    length: "30 min",
+    episode_number: 2,
+    season_number: 1,
+    year: 2018,
+)
+
+barry3 = Episode.create!(
+    title: "Ep 3 Chapter Three: Make the Unsafe Choice",
+    series_id: barry.id,
+    description: "A frustrated Barry misses an acting class to honor an obligation. Detectives Moss and Loach try to piece together a murder puzzle. Gene presses Barry to take more risks. Sally is thrown for a loop during an audition, and turns to Barry for comfort. The Chechens rejoice when a legendary assassin arrives.",
+    length: "34 min",
+    episode_number: 3,
+    season_number: 1,
+    year: 2018,
+)
+barry4 = Episode.create!(
+    title: "Ep 4 Chapter Four: Commit...To YOU",
+    series_id: barry.id,
+    description: "Barry finds that distancing himself from Fuches and the Chechens might be harder than he thought. Sally is dismayed to learn that an audition arranged by a prospective agent has strings attached. Gene promises Ross a bombshell, but only over dinner. Barry invites a Marine buddy and his two pals to a party, where a rising actor threatens Barry's claim on Sally.",
+    length: "30 min",
+    episode_number: 4,
+    season_number: 1,
+    year: 2018,
+)
+barry5 = Episode.create!(
+    title: "Ep 5 Chapter Five: Do Your Job",
+    series_id: barry.id,
+    description: "Barry looks to hit the reset button with Sally, but a scene from Macbeth triggers a reaction that pushes them farther apart. Moss moves to interrogate members of Gene's acting class after a shooting video surfaces. Barry finds himself in a quandary after having to team up with a reckless new acquaintance named Taylor in a dangerous mission to wipe out a group of Bolivians.",
+    length: "30 min",
+    episode_number: 5,
+    season_number: 1,
+    year: 2018,
+)
+
+BARRY_EPISODES = [barry1, barry2, barry3, barry4, barry5]
+
+BARRY_EPISODES.each_with_index do |episode, i|
+    attach_assets(episode, BARRY_THUMBNAIL[i], BARRY_POSTER[i], BARRY_VIDEO[i])
+end
+
 
 # # <---------- Function to attach movie assets --------------------------------------->
 
 
-# def attach_assets(content, thumbnail_url, poster_url, video_url)
-#     content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
-#     content.poster.attach(io: open(poster_url), filename: "#{content.title.split.join}poster.jpeg")
-#     content.video.attach(io: open(video_url), filename: "#{content.title.split.join}.mp4")
-# end
+def attach_assets(content, thumbnail_url, poster_url, video_url)
+    content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
+    content.poster.attach(io: open(poster_url), filename: "#{content.title.split.join}poster.jpeg")
+    content.video.attach(io: open(video_url), filename: "#{content.title.split.join}.mp4")
+end
 
 # # <----------------------------- Seed Movies ---------------------------------------------->
 
