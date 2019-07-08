@@ -77,7 +77,16 @@ require "open-uri"
 # User.destroy_all
 # Movie.destroy_all
 # Series.destroy_all
-# Episode.destroy_all
+Episode.destroy_all
+
+# # <---------- Function to attach movie assets --------------------------------------->
+
+
+def attach_assets(content, thumbnail_url, poster_url, video_url)
+    content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
+    content.poster.attach(io: open(poster_url), filename: "#{content.title.split.join}poster.jpeg")
+    content.video.attach(io: open(video_url), filename: "#{content.title.split.join}.mp4")
+end
 
 # User.create(
 #     first_name: "Demo",
@@ -289,14 +298,7 @@ BARRY_EPISODES.each_with_index do |episode, i|
 end
 
 
-# # <---------- Function to attach movie assets --------------------------------------->
 
-
-def attach_assets(content, thumbnail_url, poster_url, video_url)
-    content.thumbnail.attach(io: open(thumbnail_url), filename: "#{content.title.split.join}.jpeg")
-    content.poster.attach(io: open(poster_url), filename: "#{content.title.split.join}poster.jpeg")
-    content.video.attach(io: open(video_url), filename: "#{content.title.split.join}.mp4")
-end
 
 # # <----------------------------- Seed Movies ---------------------------------------------->
 
