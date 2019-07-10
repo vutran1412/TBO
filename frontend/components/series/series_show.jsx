@@ -3,16 +3,17 @@ import { Link, withRouter } from 'react-router-dom'
 import EpisodeIndex from './episode_index'
 
 class SeriesShow extends React.Component {
+
     componentDidMount() {
         this.props.fetchSeries(this.props.match.params.seriesId)
     }
 
-    componentWillMount() {
+    componentWillUnmount() {
         this.props.clearEpisodes()
     }
 
     render() {
-        debugger
+        
         if (Object.values(this.props.episodes).length < 1 || this.props.episodes[this.props.match.params.seriesId] === undefined) return null
         return (
             <div className="series-body">

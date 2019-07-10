@@ -23,6 +23,10 @@ class Search extends React.Component {
         this.getAutoCompleResults(e)
     }
 
+    handleClick() {
+        this.props.fetchSeries(this.props.match.params.seriesId)
+    }
+
     getAutoCompleResults(e) {
         this.setState({
             searchTerm: e.target.value
@@ -34,6 +38,10 @@ class Search extends React.Component {
         })
     }
 
+    componentWillUnmount() {
+        this.props.clearSearchResults()
+    }
+
 
     render() {
         let autoCompleteList
@@ -41,7 +49,7 @@ class Search extends React.Component {
         let shows = []
         this.props.searchRes.forEach((search, i) => {
             if (search.rating.split("-")[0] === "TV") {
-                shows.push(<SeriesIndexItem key={search.title} show={search} />)
+                shows.push(<SeriesIndexItem key={search.title} show={search} onClick={this.handleClick}/>)
             } else {
                 movies.push(<MovieIndexItem key={search.title} movie={search} />)
             }
