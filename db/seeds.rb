@@ -384,83 +384,165 @@ end
 
 # <------------------------------------ Seed band of brothers ---------------------------------->
 
-BOB_THUMBNAILS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob1.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob2.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob3.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob4.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob5.jpeg"
+# BOB_THUMBNAILS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob1.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob2.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob3.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob4.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob5.jpeg"
+# ]
+
+# BOB_POSTERS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob1poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob2poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob3poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob4poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob5poster.jpeg"
+# ]
+
+# BOB_VIDEOS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob1video.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob2video.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob3video.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob4video.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob5video.mp4"
+# ]
+
+# bob = Series.find_by(title: "Band of Brothers")
+
+# bob1 = Episode.create!(
+#     title: "Ep 1 Currahee",
+#     series_id: bob.id,
+#     description: "On June 4, 1944--just two days before the Allied invasion of Normandy--Lts. Richard Winters (Damian Lewis) and Lewis Nixon (Ron Livingston) reflect back on the events and training that led them to D-Day with the 506th Parachute Infantry Regiment E (a.k.a. Easy Company). With David Schwimmer.",
+#     length: "1 hr 14 min",
+#     episode_number: 1,
+#     season_number: 1,
+#     year: 2001,
+# )
+
+# bob2 = Episode.create!(
+#     title: "Ep 2 Day of Days",
+#     series_id: bob.id,
+#     description: "D-Day. Due to German flak, the tense men of Easy Company are dropped indiscriminately throughout the Normandy countryside, forcing Lt. Winters (Damian Lewis) to team up with a private from another company until he can find his mates.",
+#     length: "53 min",
+#     episode_number: 2,
+#     season_number: 1,
+#     year: 2001,
+# )
+# bob3 = Episode.create!(
+#     title: "Ep 3 Carentan",
+#     series_id: bob.id ,
+#     description: "On D-Day plus two, the scattered men of Easy Company regroup with the help of Pvt. Albert Blithe (Marc Warren). Lt. Welsh (Rick Warden) then delivers their orders: they must take the town of Carentan.",
+#     length: "1 hr 6 min",
+#     episode_number: 3,
+#     season_number: 1,
+#     year: 2001,
+# )
+# bob4 = Episode.create!(
+#     title: "Ep 4 Replacements",
+#     series_id: bob.id ,
+#     description: "Back in England, Easy Company's D-Day veterans heal their bodies and minds while getting acquainted with green replacement members. However, their respite ends quickly when they are sent into Holland as part of Operation Market-Garden.",
+#     length: "1 hr 1 min",
+#     episode_number: 4,
+#     season_number: 1,
+#     year: 2001,
+# )
+# bob5 = Episode.create!(
+#     title: "Ep 5 Crossroads",
+#     series_id: bob.id ,
+#     description: "In this episode directed by Tom Hanks, Lt. Winters (Damian Lewis) leads a contingent on a risky mission over a Dutch dike. Meanwhile, Easy is left in the hands of Lt. 'Moose' Heyliger (Stephen McCole), who undertakes a rescue mission in the besieged town of Arnhem.",
+#     length: "56 min",
+#     episode_number: 4,
+#     season_number: 1,
+#     year: 2001,
+# )
+
+# BOB_EPISODES = [bob1, bob2, bob3, bob4, bob5]
+
+# BOB_EPISODES.each_with_index do |bob, i|
+#     attach_assets(bob, BOB_THUMBNAILS[i], BOB_POSTERS[i], BOB_VIDEOS[i])
+# end
+
+
+# <------------------------------ Seed West World ------------------------------>
+
+WEST_WORLD_THUMBNAILS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww1.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww2.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww3.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww4.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww5.jpeg"
+
 ]
 
-BOB_POSTERS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob1poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob2poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob3poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob4poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob5poster.jpeg"
+WEST_WORLD_POSTERS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww1poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww2poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww3poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww4poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww5poster.jpeg"
 ]
 
-BOB_VIDEOS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob1video.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob2video.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob3video.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob4video.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob5video.mp4"
+WEST_WORLD_VIDEOS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo1.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo2.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo3.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo4.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo5.mp4"
 ]
 
-bob = Series.find_by(title: "Band of Brothers")
+west_world = Series.find_by(title: "Westworld")
 
-bob1 = Episode.create!(
-    title: "Ep 1 Currahee",
-    series_id: bob.id,
-    description: "On June 4, 1944--just two days before the Allied invasion of Normandy--Lts. Richard Winters (Damian Lewis) and Lewis Nixon (Ron Livingston) reflect back on the events and training that led them to D-Day with the 506th Parachute Infantry Regiment E (a.k.a. Easy Company). With David Schwimmer.",
-    length: "1 hr 14 min",
+ww1 = Episode.create!(
+    title: "Ep 1 The Original",
+    series_id: west_world.id,
+    description: "Series Premiere. As another day of fantasy plays out in Westworld--a vast, remote park where guests pay top dollar to share wild-west adventures with android \"hosts\"--top programmer Bernard Lowe alerts park founder Dr. Robert Ford about incidents of aberrant behavior cropping up in some recently re-coded hosts.",
+    length: "1 hr 13 min",
     episode_number: 1,
     season_number: 1,
-    year: 2001,
+    year: 2016,
 )
-
-bob2 = Episode.create!(
-    title: "Ep 2 Day of Days",
-    series_id: bob.id,
-    description: "D-Day. Due to German flak, the tense men of Easy Company are dropped indiscriminately throughout the Normandy countryside, forcing Lt. Winters (Damian Lewis) to team up with a private from another company until he can find his mates.",
-    length: "53 min",
+ww2 = Episode.create!(
+    title: "Ep 2 Chestnut",
+    series_id: west_world.id,
+    description: "A pair of guests, first-timer William and repeat visitor Logan, arrive at Westworld with different expectations and agendas. Bernard and Quality Assurance head Theresa Cullen debate whether a recent host anomaly is contagious. Meanwhile, the Man in Black conscripts a condemned man, Lawrence, to help him uncover Westworld's deepest secrets.",
+    length: "1 hr 2 min",
     episode_number: 2,
     season_number: 1,
-    year: 2001,
+    year: 2016,
 )
-bob3 = Episode.create!(
-    title: "Ep 3 Carentan",
-    series_id: bob.id ,
-    description: "On D-Day plus two, the scattered men of Easy Company regroup with the help of Pvt. Albert Blithe (Marc Warren). Lt. Welsh (Rick Warden) then delivers their orders: they must take the town of Carentan.",
-    length: "1 hr 6 min",
+ww3 = Episode.create!(
+    title: "Ep 3 The Stray",
+    series_id: west_world.id,
+    description: "Elsie and Stubbs head into the hills in pursuit of a missing host. Teddy gets a new backstory, which sets him off in pursuit of a new villain, leaving Dolores alone in Sweetwater. Bernard investigates the origins of madness and hallucinations within the hosts. William finds an attraction he'd like to pursue and drags Logan along for the ride.",
+    length: "1 hr 3 min",
     episode_number: 3,
     season_number: 1,
-    year: 2001,
+    year: 2016 ,
 )
-bob4 = Episode.create!(
-    title: "Ep 4 Replacements",
-    series_id: bob.id ,
-    description: "Back in England, Easy Company's D-Day veterans heal their bodies and minds while getting acquainted with green replacement members. However, their respite ends quickly when they are sent into Holland as part of Operation Market-Garden.",
-    length: "1 hr 1 min",
+ww4 = Episode.create!(
+    title: "Ep 4 Dissonance Theory",
+    series_id: west_world.id,
+    description: "Dolores joins William and Logan on a bounty hunt in the badlands. The Man in Black, with Lawrence in Tow, finds a critical clue in his search to unlock the maze. Dr. Ford and Theresa discuss the future of the park. Maeve is troubled by a recurring vision.",
+    length: "1 hr 3 min",
     episode_number: 4,
     season_number: 1,
-    year: 2001,
+    year: 2016 ,
 )
-bob5 = Episode.create!(
-    title: "Ep 5 Crossroads",
-    series_id: bob.id ,
-    description: "In this episode directed by Tom Hanks, Lt. Winters (Damian Lewis) leads a contingent on a risky mission over a Dutch dike. Meanwhile, Easy is left in the hands of Lt. 'Moose' Heyliger (Stephen McCole), who undertakes a rescue mission in the besieged town of Arnhem.",
-    length: "56 min",
-    episode_number: 4,
+ww5 = Episode.create!(
+    title: "Ep 5 Contrapasso",
+    series_id: west_world.id,
+    description: "Dolores, William and Logan reach Pariah, a town built on decadence and transgression--and are recruited for a dangerous mission. The Man in Black meets an unlikely ally in his search to unlock the maze.",
+    length: "1 hr",
+    episode_number: 5,
     season_number: 1,
-    year: 2001,
+    year: 2016 ,
 )
 
-BOB_EPISODES = [bob1, bob2, bob3, bob4, bob5]
+WEST_WORLD_EPISODES = [ww1, ww2, ww3, ww4, ww5]
 
-BOB_EPISODES.each_with_index do |bob, i|
-    attach_assets(bob, BOB_THUMBNAILS[i], BOB_POSTERS[i], BOB_VIDEOS[i])
+WEST_WORLD_EPISODES.each_with_index do |episode, i|
+    attach_assets(episode, WEST_WORLD_THUMBNAILS[i], WEST_WORLD_POSTERS[i], WEST_WORLD_VIDEOS[i])
 end
 
 
