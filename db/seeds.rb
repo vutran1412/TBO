@@ -380,6 +380,90 @@ end
 #     attach_assets(episode, BALLERS_THUMBNAILS[i], BALLERS_POSTERS[i], BALLERS_VIDEOS[i])
 # end
 
+
+
+# <------------------------------------ Seed band of brothers ---------------------------------->
+
+BOB_THUMBNAILS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob1.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob2.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob3.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob4.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob5.jpeg"
+]
+
+BOB_POSTERS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob1poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob2poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob3poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob4poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/bandofbrothers/bob5poster.jpeg"
+]
+
+BOB_VIDEOS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob1video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob2video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob3video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob4video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/bandofbrothers/bob5video.mp4"
+]
+
+bob = Series.find_by(title: "Band of Brothers")
+
+bob1 = Episode.create!(
+    title: "Ep 1 Currahee",
+    series_id: bob.id,
+    description: "On June 4, 1944--just two days before the Allied invasion of Normandy--Lts. Richard Winters (Damian Lewis) and Lewis Nixon (Ron Livingston) reflect back on the events and training that led them to D-Day with the 506th Parachute Infantry Regiment E (a.k.a. Easy Company). With David Schwimmer.",
+    length: "1 hr 14 min",
+    episode_number: 1,
+    season_number: 1,
+    year: 2001,
+)
+
+bob2 = Episode.create!(
+    title: "Ep 2 Day of Days",
+    series_id: bob.id,
+    description: "D-Day. Due to German flak, the tense men of Easy Company are dropped indiscriminately throughout the Normandy countryside, forcing Lt. Winters (Damian Lewis) to team up with a private from another company until he can find his mates.",
+    length: "53 min",
+    episode_number: 2,
+    season_number: 1,
+    year: 2001,
+)
+bob3 = Episode.create!(
+    title: "Ep 3 Carentan",
+    series_id: bob.id ,
+    description: "On D-Day plus two, the scattered men of Easy Company regroup with the help of Pvt. Albert Blithe (Marc Warren). Lt. Welsh (Rick Warden) then delivers their orders: they must take the town of Carentan.",
+    length: "1 hr 6 min",
+    episode_number: 3,
+    season_number: 1,
+    year: 2001,
+)
+bob4 = Episode.create!(
+    title: "Ep 4 Replacements",
+    series_id: bob.id ,
+    description: "Back in England, Easy Company's D-Day veterans heal their bodies and minds while getting acquainted with green replacement members. However, their respite ends quickly when they are sent into Holland as part of Operation Market-Garden.",
+    length: "1 hr 1 min",
+    episode_number: 4,
+    season_number: 1,
+    year: 2001,
+)
+bob5 = Episode.create!(
+    title: "Ep 5 Crossroads",
+    series_id: bob.id ,
+    description: "In this episode directed by Tom Hanks, Lt. Winters (Damian Lewis) leads a contingent on a risky mission over a Dutch dike. Meanwhile, Easy is left in the hands of Lt. 'Moose' Heyliger (Stephen McCole), who undertakes a rescue mission in the besieged town of Arnhem.",
+    length: "56 min",
+    episode_number: 4,
+    season_number: 1,
+    year: 2001,
+)
+
+BOB_EPISODES = [bob1, bob2, bob3, bob4, bob5]
+
+BOB_EPISODES.each_with_index do |bob, i|
+    attach_assets(bob, BOB_THUMBNAILS[i], BOB_POSTERS[i], BOB_VIDEOS[i])
+end
+
+
 # # <----------------------------- Seed Movies ---------------------------------------------->
 
 # dejavu = Movie.create!(
