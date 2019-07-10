@@ -13,8 +13,7 @@ class SeriesShow extends React.Component {
     }
 
     render() {
-        
-        if (Object.values(this.props.episodes).length < 1 || this.props.episodes[this.props.match.params.seriesId] === undefined) return null
+        if (this.props.episodes.length < 1) return null
         return (
             <div className="series-body">
                 <div className="series-header-container">
@@ -26,14 +25,15 @@ class SeriesShow extends React.Component {
                     <div className="series-pilot-description-container">
                         <div className="eries-pilot-description">
                             <h1 className="action-pitch">START WATCHING</h1>
-                            <span className="pilot-title">Sn {this.props.episodes[this.props.match.params.seriesId].seasonNumber} {this.props.episodes[this.props.match.params.seriesId].title} Ep {this.props.episodes[this.props.match.params.seriesId].episodeNumber}</span>
-                            <span className="pilot-description">{this.props.episodes[this.props.match.params.seriesId].description}</span>
-                            <span className="meta-description">{this.props.episodes[this.props.match.params.seriesId].year} | {this.props.episodes[this.props.match.params.seriesId].length}</span>
+                            <span className="pilot-title">Sn {this.props.episodes[0].season_number
+} {this.props.episodes[0].title} Ep {this.props.episodes[0].episode_number}</span>
+                            <span className="pilot-description">{this.props.episodes[0].description}</span>
+                            <span className="meta-description">{this.props.episodes[0].year} | {this.props.episodes[0].length}</span>
                         </div>
                     </div>
                     <div className="series-pilot-image-container">
-                        <Link to={`/series/${this.props.show.id}/${this.props.episodes[this.props.match.params.seriesId].id}/`}>
-                            <img className="series-pilot-image" src={this.props.episodes[this.props.match.params.seriesId].posterUrl} />
+                        <Link to={`/series/${this.props.show.id}/${this.props.episodes[0].id}/`}>
+                            <img className="series-pilot-image" src={this.props.episodes[0].posterUrl} />
                         </Link>
                     </div>
                 </div>

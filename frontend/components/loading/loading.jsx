@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from './logo'
-import { Dots } from './dots'
 
 class Loading extends React.Component {
     constructor(props) {

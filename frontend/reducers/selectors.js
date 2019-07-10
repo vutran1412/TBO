@@ -6,6 +6,10 @@ export const getAllSeries = ({ series }) => (
     Object.keys(series).map(id => series[id])
 )
 
+export const getAllEpisodes = ({ episodes }) => (
+    Object.keys(episodes).map(id => episodes[id])
+) 
+
 export const getAllSearchRes = ({ search }) => (
     Object.keys(search).map(id => search[id])
 )
