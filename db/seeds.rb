@@ -77,7 +77,7 @@ require "open-uri"
 # User.destroy_all
 # Movie.destroy_all
 # Series.destroy_all
-Episode.destroy_all
+# Episode.destroy_all
 
 # # <---------- Function to attach movie assets --------------------------------------->
 
@@ -281,6 +281,7 @@ barry4 = Episode.create!(
     season_number: 1,
     year: 2018,
 )
+
 barry5 = Episode.create!(
     title: "Ep 5 Chapter Five: Do Your Job",
     series_id: barry.id,
@@ -298,7 +299,86 @@ BARRY_EPISODES.each_with_index do |episode, i|
 end
 
 
+# <---------------------------------- Ballers episodes aws urls ---------------------------->
 
+BALLERS_THUMBNAILS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller1.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller2.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller3.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller4.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller5.jpeg"
+]
+
+BALLERS_POSTERS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller1poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller2poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller3poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller4poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/ballers/baller5poster.jpeg"
+]
+
+BALLERS_VIDEOS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/ballers/baller1video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/ballers/baller2video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/ballers/baller3video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/ballers/baller4video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/ballers/baller5video.mp4"
+]
+
+ballers = Series.find_by(title: "Ballers")
+
+ballers1 = Episode.create!(
+    title: "Ep 1 Pilot",
+    series_id: ballers.id,
+    description: "Series Premiere. After the unexpected demise of a friend and former teammate, retired football superstar Spencer ramps up his efforts to build a post-football career in Miami, and feels pressure from Joe, his boss at a financial firm, to monetize his friendships. Meanwhile, recently retired player, Charles, copes with the realities of finding a new job.",
+    length: "35 min",
+    episode_number: 1,
+    season_number: 1,
+    year: 2015,
+)
+
+ballers2 = Episode.create!(
+    title: "Ep 2 Raise Up",
+    series_id: ballers.id,
+    description: "A cash-strapped Spencer struggles to close a deal when Vernon's best friend, Reggie, refuses to step aside, while Jason works hard to renegotiate for his client. Ricky finds that not all his new teammates are friendly. At his new job, Charles finds it hard to keep his mind off the game. At a brunch, Spencer counsels Vernon to learn from his mistakes.",
+    length: "34 min",
+    episode_number: 2,
+    season_number: 1,
+    year: 2015,
+)
+ballers3 = Episode.create!(
+    title: "Ep 3 Move the Chains",
+    series_id: ballers.id,
+    description: "Hoping to attract new clients, Spencer and Joe hold a corporate event. In their fight over Vernon, Spencer and Reggie's rivalry hits the boiling point. Bored by retirement, Charles lets loose for a night. Ricky learns his beef with his teammate, Alonzo, may be due to an awkward connection.",
+    length: "33 min",
+    episode_number: 3,
+    season_number: 1,
+    year: 2015,
+)
+ballers4 = Episode.create!(
+    title: "Ep 4 Heads Will Roll",
+    series_id: ballers.id,
+    description: "Facing pressure from Tracy, Spencer pays a visit to a neurologist. Charles is pursued by a woman he met at Spencer's party, while Joe breaks the rules to try to bag a big client. Ricky attempts to mend the fence with Alonzo. After Reggie tries to hijack Vernon's re-negotiation, Spencer takes a stand.",
+    length: "34 min",
+    episode_number: 4,
+    season_number: 1,
+    year: 2015,
+)
+ballers5 = Episode.create!(
+    title: "Ep 5 Machete Charge",
+    series_id: ballers.id,
+    description: "Ricky tries to find common ground with Alonzo. Charles's marriage is put to the test. Spencer and Joe step in to help Vernon with a crisis.",
+    length: "30 min",
+    episode_number: 5,
+    season_number: 1,
+    year: 2015,
+)
+
+BALLERS_EPISODES = [ballers1, ballers2, ballers3, ballers4, ballers5]
+
+BALLERS_EPISODES.each_with_index do |episode, i|
+    attach_assets(episode, BALLERS_THUMBNAILS[i], BALLERS_POSTERS[i], BALLERS_VIDEOS[i])
+end
 
 # # <----------------------------- Seed Movies ---------------------------------------------->
 

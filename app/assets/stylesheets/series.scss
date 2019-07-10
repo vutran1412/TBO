@@ -7,3 +7,122 @@
     padding-left: 0px;
     margin-left: 81px;
 }
+.series-body {
+    margin-top: 130px;
+}
+
+.series-header-container {
+    width: 1151px; 
+    height: 56px; 
+    top: 124px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.series-header {
+   display: inline-block; 
+   position: absolute; 
+   font-size: 47px; 
+   font-style: normal; 
+   text-decoration: none; 
+   text-transform: none; 
+   line-height: 56px; 
+   letter-spacing: -1.2px; 
+   color: azure; 
+   white-space: pre; 
+   max-width: 800px; 
+   transform: translate(323.5px, 0px);
+   
+}
+
+.series-card-container {
+    display: flex;
+    justify-content: center;
+    width: 80%; 
+    height: 100%;
+    margin-left: 100px;
+}
+
+.series-pilot-description-container {
+    background-color: rgb(10, 35, 60);
+    width: 30%; 
+    color: azure;
+    max-height: 100%;
+}
+
+.series-pilot-desription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    height: 100%;
+    font-size: 20px;
+}
+
+.action-pitch {
+    display: block; 
+    max-width: 270px;
+    text-align: left;
+    padding: 30px;
+    font-size: 18px;
+    color: azure;
+}
+
+.pilot-title {
+    display: block;
+    text-align: left;
+    padding: 0 30px 20px 30px;
+}
+
+.pilot-description {
+    display: block;
+    text-align: left;
+    padding: 0 30px 20px 30px;
+    line-height: 1.5em;
+}
+
+.meta-description {
+    display: block;
+    text-align: left;
+    padding: 0 30px 10px 30px;
+}
+
+.series-pilot-image-container {
+    width: 70%;
+    height: 100%;
+}
+
+.series-pilot-image {
+    width: 100%;
+}
+
+.series-pilot-image:hover {
+    opacity: .5;
+    cursor: pointer;
+
+}
+
+.search-result-image:hover {
+    opacity: .2;
+    cursor: pointer;
+}
+
+.series-description-container {
+    width: 825px; 
+    height: 166px; 
+    top: 569px;
+    margin: 30px 0 30px 70px;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: azure;
+}
+
+.series-description {
+    display: block;
+    padding: 0 0 0 30px;
+}
+
+.episode-index-container {
+    padding-top: 60px;
+    margin-left: 70px;
+}

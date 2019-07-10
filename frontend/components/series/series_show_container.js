@@ -1,19 +1,22 @@
-import { connect } from 'reac-redux'
+import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { fetchSeries } from '../../actions/series_actions'
-import SeriesShow from './series/show'
+import { fetchSeries, clearEpisodes } from '../../actions/series_actions'
+import SeriesShow from './series_show'
 
 const mapStateToProps = (state, ownProps) => {
     const id = ownProps.match.params.seriesId
     const show = state.entities.series[id]
+    const episodes = Object.values(state.entities.episodes)
     return ({
-        show
+        show,
+        episodes
     })
 }
 
 const mapDispatchToProps = dispatch => {
     return ({
-        fetchSeries: id => dispatch(fetchSeries(id))
+        fetchSeries: id => dispatch(fetchSeries(id)),
+        clearEpisodes: () => dispatch(clearEpisodes())
     })
 }
 

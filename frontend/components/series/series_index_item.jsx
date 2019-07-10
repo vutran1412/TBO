@@ -5,7 +5,7 @@ const SeriesIndexItem = (props) => {
     return (
         <div className="search-result-item-container">
             <div className="search-result-image">
-                <Link to="#">
+                <Link to={`/series/${props.show.id}`}>
                     <img className="index-item-thumbnail" src={props.show.thumbnailUrl} />
                 </Link>
             </div>

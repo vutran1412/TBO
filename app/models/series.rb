@@ -16,7 +16,7 @@ class Series < ApplicationRecord
     validates :title, :description, :rating, :audio , :format, presence: true
     validates :title, uniqueness: true
 
-    has_many :episodes, foreign_key: :series_id, class_name: :Episodes
+    has_many :episodes, foreign_key: :series_id, class_name: :Episode
 
     has_one_attached :thumbnail
     has_one_attached :poster

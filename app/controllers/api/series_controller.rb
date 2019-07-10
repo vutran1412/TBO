@@ -6,7 +6,7 @@ class Api::SeriesController < ApplicationController
     def show
         @series = Series.find(params[:id])
         if @series
-            # @episodes = @series.episodes
+            @episodes = @series.episodes
             render :show
         else
             render json: @series.errors.full_messages

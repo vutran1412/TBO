@@ -46,9 +46,9 @@ class Carousel extends React.Component {
     }
 
     render() {
-        const posterUrls = this.props.series.map(movie => movie.posterUrl)
-        const seriesTitles = this.props.series.map(movie => movie.title)
-        const seriesIds = this.props.series.map(movie => movie.id)
+        const posterUrls = this.props.series.map(show => show.posterUrl)
+        const seriesTitles = this.props.series.map(show => show.title)
+        const seriesIds = this.props.series.map(show => show.id)
         return (
             <div className="carousel">
                 <i className="fas fa-chevron-left" onClick={this.previousSlide}></i>

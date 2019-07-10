@@ -1,4 +1,4 @@
-json.array! @episodes do |episodes|
+episodes.each do |episode|
     json.set! episode.id do
         json.partial! '/api/series/episode', episode: episode
         json.thumbnailUrl url_for(episode.thumbnail)

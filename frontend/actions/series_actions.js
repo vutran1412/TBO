@@ -3,6 +3,7 @@ import * as SeriesApiUtil from '../util/series_util'
 export const RECEIVE_ALL_SERIES = 'RECEIVE_ALL_SERIES'
 export const RECEIVE_SERIES = 'RECEIVE_SERIES'
 export const CLEAR_SERIES = 'CLEAR_SERIES'
+export const CLEAR_EPISODES = 'CLEAR_EPISODES'
 
 export const receiveAllSeries = shows => (
     {
@@ -22,6 +23,12 @@ export const receiveSeries = ({ series, episodes }) => (
 export const clearSeries = () => (
     {
         type: CLEAR_SERIES
+    }
+)
+
+export const clearEpisodes = () => (
+    {
+        type: CLEAR_EPISODES
     }
 )
 
