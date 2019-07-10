@@ -466,84 +466,84 @@ end
 
 # <------------------------------ Seed West World ------------------------------>
 
-WEST_WORLD_THUMBNAILS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww1.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww2.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww3.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww4.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww5.jpeg"
+# WEST_WORLD_THUMBNAILS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww1.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww2.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww3.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww4.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww5.jpeg"
 
-]
+# ]
 
-WEST_WORLD_POSTERS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww1poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww2poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww3poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww4poster.jpeg",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww5poster.jpeg"
-]
+# WEST_WORLD_POSTERS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww1poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww2poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww3poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww4poster.jpeg",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/westworld/ww5poster.jpeg"
+# ]
 
-WEST_WORLD_VIDEOS = [
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo1.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo2.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo3.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo4.mp4",
-    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo5.mp4"
-]
+# WEST_WORLD_VIDEOS = [
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo1.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo2.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo3.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo4.mp4",
+#     "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/westworld/wwvideo5.mp4"
+# ]
 
-west_world = Series.find_by(title: "Westworld")
+# west_world = Series.find_by(title: "Westworld")
 
-ww1 = Episode.create!(
-    title: "Ep 1 The Original",
-    series_id: west_world.id,
-    description: "Series Premiere. As another day of fantasy plays out in Westworld--a vast, remote park where guests pay top dollar to share wild-west adventures with android \"hosts\"--top programmer Bernard Lowe alerts park founder Dr. Robert Ford about incidents of aberrant behavior cropping up in some recently re-coded hosts.",
-    length: "1 hr 13 min",
-    episode_number: 1,
-    season_number: 1,
-    year: 2016,
-)
-ww2 = Episode.create!(
-    title: "Ep 2 Chestnut",
-    series_id: west_world.id,
-    description: "A pair of guests, first-timer William and repeat visitor Logan, arrive at Westworld with different expectations and agendas. Bernard and Quality Assurance head Theresa Cullen debate whether a recent host anomaly is contagious. Meanwhile, the Man in Black conscripts a condemned man, Lawrence, to help him uncover Westworld's deepest secrets.",
-    length: "1 hr 2 min",
-    episode_number: 2,
-    season_number: 1,
-    year: 2016,
-)
-ww3 = Episode.create!(
-    title: "Ep 3 The Stray",
-    series_id: west_world.id,
-    description: "Elsie and Stubbs head into the hills in pursuit of a missing host. Teddy gets a new backstory, which sets him off in pursuit of a new villain, leaving Dolores alone in Sweetwater. Bernard investigates the origins of madness and hallucinations within the hosts. William finds an attraction he'd like to pursue and drags Logan along for the ride.",
-    length: "1 hr 3 min",
-    episode_number: 3,
-    season_number: 1,
-    year: 2016 ,
-)
-ww4 = Episode.create!(
-    title: "Ep 4 Dissonance Theory",
-    series_id: west_world.id,
-    description: "Dolores joins William and Logan on a bounty hunt in the badlands. The Man in Black, with Lawrence in Tow, finds a critical clue in his search to unlock the maze. Dr. Ford and Theresa discuss the future of the park. Maeve is troubled by a recurring vision.",
-    length: "1 hr 3 min",
-    episode_number: 4,
-    season_number: 1,
-    year: 2016 ,
-)
-ww5 = Episode.create!(
-    title: "Ep 5 Contrapasso",
-    series_id: west_world.id,
-    description: "Dolores, William and Logan reach Pariah, a town built on decadence and transgression--and are recruited for a dangerous mission. The Man in Black meets an unlikely ally in his search to unlock the maze.",
-    length: "1 hr",
-    episode_number: 5,
-    season_number: 1,
-    year: 2016 ,
-)
+# ww1 = Episode.create!(
+#     title: "Ep 1 The Original",
+#     series_id: west_world.id,
+#     description: "Series Premiere. As another day of fantasy plays out in Westworld--a vast, remote park where guests pay top dollar to share wild-west adventures with android \"hosts\"--top programmer Bernard Lowe alerts park founder Dr. Robert Ford about incidents of aberrant behavior cropping up in some recently re-coded hosts.",
+#     length: "1 hr 13 min",
+#     episode_number: 1,
+#     season_number: 1,
+#     year: 2016,
+# )
+# ww2 = Episode.create!(
+#     title: "Ep 2 Chestnut",
+#     series_id: west_world.id,
+#     description: "A pair of guests, first-timer William and repeat visitor Logan, arrive at Westworld with different expectations and agendas. Bernard and Quality Assurance head Theresa Cullen debate whether a recent host anomaly is contagious. Meanwhile, the Man in Black conscripts a condemned man, Lawrence, to help him uncover Westworld's deepest secrets.",
+#     length: "1 hr 2 min",
+#     episode_number: 2,
+#     season_number: 1,
+#     year: 2016,
+# )
+# ww3 = Episode.create!(
+#     title: "Ep 3 The Stray",
+#     series_id: west_world.id,
+#     description: "Elsie and Stubbs head into the hills in pursuit of a missing host. Teddy gets a new backstory, which sets him off in pursuit of a new villain, leaving Dolores alone in Sweetwater. Bernard investigates the origins of madness and hallucinations within the hosts. William finds an attraction he'd like to pursue and drags Logan along for the ride.",
+#     length: "1 hr 3 min",
+#     episode_number: 3,
+#     season_number: 1,
+#     year: 2016 ,
+# )
+# ww4 = Episode.create!(
+#     title: "Ep 4 Dissonance Theory",
+#     series_id: west_world.id,
+#     description: "Dolores joins William and Logan on a bounty hunt in the badlands. The Man in Black, with Lawrence in Tow, finds a critical clue in his search to unlock the maze. Dr. Ford and Theresa discuss the future of the park. Maeve is troubled by a recurring vision.",
+#     length: "1 hr 3 min",
+#     episode_number: 4,
+#     season_number: 1,
+#     year: 2016 ,
+# )
+# ww5 = Episode.create!(
+#     title: "Ep 5 Contrapasso",
+#     series_id: west_world.id,
+#     description: "Dolores, William and Logan reach Pariah, a town built on decadence and transgression--and are recruited for a dangerous mission. The Man in Black meets an unlikely ally in his search to unlock the maze.",
+#     length: "1 hr",
+#     episode_number: 5,
+#     season_number: 1,
+#     year: 2016 ,
+# )
 
-WEST_WORLD_EPISODES = [ww1, ww2, ww3, ww4, ww5]
+# WEST_WORLD_EPISODES = [ww1, ww2, ww3, ww4, ww5]
 
-WEST_WORLD_EPISODES.each_with_index do |episode, i|
-    attach_assets(episode, WEST_WORLD_THUMBNAILS[i], WEST_WORLD_POSTERS[i], WEST_WORLD_VIDEOS[i])
-end
+# WEST_WORLD_EPISODES.each_with_index do |episode, i|
+#     attach_assets(episode, WEST_WORLD_THUMBNAILS[i], WEST_WORLD_POSTERS[i], WEST_WORLD_VIDEOS[i])
+# end
 
 
 # # <----------------------------- Seed Movies ---------------------------------------------->

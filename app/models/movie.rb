@@ -13,6 +13,7 @@
 #  rating      :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  list_id     :integer
 #
 
 class Movie < ApplicationRecord
@@ -22,4 +23,7 @@ class Movie < ApplicationRecord
     has_one_attached :thumbnail
     has_one_attached :poster
     has_one_attached :video    
+
+    belongs_to :my_list, foreign_key: :list_id, class_name: :MyList
+    
 end

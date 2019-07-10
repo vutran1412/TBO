@@ -24,6 +24,10 @@ class User < ApplicationRecord
 
     has_secure_password
 
+    has_one :my_list, foreign_key: :user_id, class_name: :MyList
+    has_many :movies, through: :my_list, source: :movies
+    has_many :series, through: :my_list, source: :series
+
     attr_reader :password
     after_initialize :ensure_session_token
 
