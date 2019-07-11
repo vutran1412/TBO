@@ -545,6 +545,85 @@ end
 #     attach_assets(episode, WEST_WORLD_THUMBNAILS[i], WEST_WORLD_POSTERS[i], WEST_WORLD_VIDEOS[i])
 # end
 
+# <------------------------------ Seed Chernobyl -------------------------------------->
+
+CHERNOBYL_THUMBNAILS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl1.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl2.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl3.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl4.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl5.jpeg"
+]
+
+CHERNOBYL_POSTERS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl1poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl2poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl3poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl4poster.jpeg",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/photos/chernobyl/chernobyl5poster.jpeg"
+]
+
+CHERNOBYL_VIDEOS = [
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/chernobyl/chernobyl1video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/chernobyl/chernobyl2video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/chernobyl/chernobyl3video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/chernobyl/chernobyl4video.mp4",
+    "https://tbo-dev.s3-us-west-1.amazonaws.com/Series/video/chernobyl/chernobyl5video.mp4"
+]
+
+chernobyl = Series.find_by(title: "Chernobyl")
+
+cb1 = Episode.create!(
+    title: "Ep 1 1:23:45",
+    series_id: chernobyl.id,
+    description: "April 26, 1986, USSR. An explosion at the Chernobyl nuclear power plant sends workers scrambling to assess the damage. When reports reach the control room that the reactor's core is \"gone,\" deputy chief engineer Anatoly Dyatlov sends men to the core itself to investigate. Meanwhile, Vasily, a fireman, is summoned to help put out the fire, leaving behind his wife Lyudmilla.",
+    length: "1 hr 4 min",
+    episode_number: 1,
+    season_number: 1,
+    year: 2019,
+)
+cb2 = Episode.create!(
+    title: "Ep 2 Please Remain Calm",
+    series_id: chernobyl.id,
+    description: "With untold millions at risk after the Chernobyl explosion, nuclear physicist Ulana Khomyuk makes a desperate attempt to reach Legasov and warn him about the threat of second explosion that could devastate the continent.",
+    length: "1 hr 10 min",
+    episode_number: 2,
+    season_number: 1,
+    year: 2019,
+)
+cb3 = Episode.create!(
+    title: "Ep 3 Open Wide, O Earth",
+    series_id: chernobyl.id,
+    description: "April 30, 1986. After bribing her way into Hospital Number 6, Lyudmilla flouts a nurse's warnings about limiting her contact with Vasily. With the reactor fire contained, Legasov warns Shcherbina that a meltdown could contaminate drinking water for millions. Khomyuk vows to uncover the cause of the explosion; Legasov lays out a decontamination plan for surrounding areas.",
+    length: "1 hr 7 min",
+    episode_number: 3,
+    season_number: 1,
+    year: 2019,
+)
+cb4 = Episode.create!(
+    title: "Ep 4 The Happiness of All Mankind",
+    series_id: chernobyl.id,
+    description: "Legasov and Shcherbina consider using lunar rovers to remove radioactive debris, while Khomyuk faces government hurdles in determining the truth about the cause of the explosion.",
+    length: "2019",
+    episode_number: 4,
+    season_number: 1,
+    year: 2019,
+)
+cb5 = Episode.create!(
+    title: "Ep 5 Vichnaya Pamyat",
+    series_id: chernobyl.id,
+    description: "After being congratulated by the KGB for publicly affirming that the Chernobyl explosion was caused by \"operator error,\" Legasov weighs the price of telling the truth at the upcoming criminal trial of Dyatlov, Bryukhanov and Fomin.",
+    length: "1 hr 17 min",
+    episode_number: 5,
+    season_number: 1,
+    year: 2019,
+)
+CHERNOBYL_EPISODES = [cb1, cb2, cb3, cb4, cb5]
+
+CHERNOBYL_EPISODES.each_with_index do |cb, i|
+    attach_assets(cb, CHERNOBYL_THUMBNAILS[i], CHERNOBYL_POSTERS[i], CHERNOBYL_VIDEOS[i])
+end
+
 
 # # <----------------------------- Seed Movies ---------------------------------------------->
 
