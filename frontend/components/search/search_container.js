@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return ({
-        searchRes: getAllSearchRes(state.ui)
+        searchRes: getAllSearchRes(state.entities)
     })
 }
 
