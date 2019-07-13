@@ -11,4 +11,8 @@ class Api::MoviesController < ApplicationController
             render @movie.errors.full_messages, 404
         end
     end
+
+    def create
+        
+    end
 end
