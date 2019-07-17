@@ -27,7 +27,6 @@
 }
 
 .splash-content-container {
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,18 +41,20 @@
 
 .splash-content-container > div {
     margin: 20px;
+    padding-left: 20px;
 }
 
 .splash-content-container > h1 {
     margin: 20px;
+    padding-left: 20px;
 } 
 
 .splash-header {
     background-image: image-url('tbo-06.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 450px; 
-    min-height: 150px; 
+    width: 350px; 
+    min-height: 100px; 
     left: 30px; 
     top: 50px;
     font-size: 38px;

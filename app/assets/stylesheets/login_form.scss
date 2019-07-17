@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-between;
     font-family: 'Open Sans', sans-serif;
     margin: 35px auto;
 }
@@ -26,7 +25,6 @@
     box-sizing: border-box;
     margin-bottom: 10px;
     margin: 35px auto;
-    width: 338px;
     height: 34px;
 }
 
@@ -34,7 +32,7 @@
     display: block;
     font-size: 24px;
     box-sizing: border-box;
-    width: 338px;
+    width: 300px;
     margin: 35px auto;
     margin-top: 10px;
     height: 34px;
@@ -49,7 +47,7 @@
     color: lightgray;
     cursor: pointer;
     margin: 35px auto;
-    width: 338px;
+    width: 300px;
     height: 39px;
     border: none;
     margin-bottom: 10px;

@@ -8,7 +8,9 @@ const Splash = (props) => (
             <div className="splash-header"></div>
             <h1 className="splash-sub-header">Get All of TBO</h1>
             <div className="splash-pitch">
-                <p>Stream your favorite screen - no cable needed. Try 7 days free, then $14.99/month.</p>
+                <p>Stream your favorite screen - </p>
+                <p>no cable needed. Try 7 days free, </p>
+                <p>then $14.99/month.</p>   
             </div>
             <div className="splash-signup-container">
                 <button className="splash-signup-button" onClick={() => props.modalOpen('signup')}>START YOUR FREE TRIAL</button>
