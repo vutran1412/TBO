@@ -28,7 +28,7 @@ class SeriesShow extends React.Component {
                             <span className="pilot-title">Sn {this.props.episodes[0].season_number
 } {this.props.episodes[0].title} Ep {this.props.episodes[0].episode_number}</span>
                             <span className="pilot-description">{this.props.episodes[0].description}</span>
-                            <span className="meta-description">{this.props.episodes[0].year} | {this.props.episodes[0].length}</span>
+                            <span className="series-meta-description">{this.props.episodes[0].year} | {this.props.episodes[0].length}</span>
                         </div>
                     </div>
                     <div className="series-pilot-image-container">

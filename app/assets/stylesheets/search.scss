@@ -59,7 +59,8 @@
 
 .search-result-item-container {
     width: 374px; 
-    height: 279px; 
+    // height: 279px; 
+    padding-bottom: 10px;
     overflow: hidden;
     color: azure;
 }

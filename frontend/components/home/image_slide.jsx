@@ -16,3 +16,5 @@ export const ImageSlide = ({ movieTitle, url, movieId }) => {
         </div>
     )
 }
+
+export default ImageSlide

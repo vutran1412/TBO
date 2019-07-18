@@ -19,13 +19,13 @@ class SessionForm extends React.Component {
         this.props.clearSessionErrors()
     }
 
-    componentDidUnmount() {
-        this.setState({
-            email: '',
-            password: '',
-            isDemoUser: false
-        })
-    }
+    // componentWillUpdate() {
+    //     this.setState({
+    //         email: '',
+    //         password: '',
+    //         isDemoUser: false
+    //     })
+    // }
 
     update(field) {
         return e => this.setState({

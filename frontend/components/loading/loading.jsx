@@ -10,14 +10,15 @@ class Loading extends React.Component {
     }
 
     componentDidMount() {
-        let loadingTimeId = setTimeout(() => {
+        this.loadingTimeId = setTimeout(() => {
             this.setState({
                 loading: false
             })
-            if (!this.loading) {
-                clearTimeout(loadingTimeId)
-            }
         }, 1000)
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.loadingTimeId)
     }
 
     render() {
