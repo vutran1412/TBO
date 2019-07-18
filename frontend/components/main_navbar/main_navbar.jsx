@@ -3,6 +3,9 @@ import Menu from '../menu/menu'
 import { Link, Redirect } from 'react-router-dom'
 import MenuItem from '../menu/menu_item'
 import MenuButton from '../menu/menu_button'
+import UserMenu from '../menu/user_menu'
+import UserMenuButton from '../menu/user_menu_button'
+import UserMenuItem from '../menu/user_menu_item';
 
 
 class MainNavBar extends React.Component {
@@ -11,9 +14,11 @@ class MainNavBar extends React.Component {
         this.state = {
             hasScroll: false,
             menuOpen: false,
+            userMenuOpen: false,
             loading: true
         }
         this.handleScroll = this.handleScroll.bind(this)
+        this.handleClick =  this.handleClick.bind(this)
     }
 
     componentDidMount() {
@@ -29,6 +34,18 @@ class MainNavBar extends React.Component {
 
     handleMenuClick() {
         this.setState({ menuOpen: !this.state.menuOpen })
+    }
+
+    handleUserMenuClick() {
+        this.setState({ userMenuOpen: !this.state.userMenuOpen })
+    }
+
+    handleButtonClick() {
+        this.setState({ userMenuOpen: false })
+    }
+
+    handleUserMenuLeave() {
+        this.setState({ userMenuOpen: false })
     }
 
     handleLinkClick() {
@@ -117,7 +134,15 @@ class MainNavBar extends React.Component {
                     delay={`${index * 0.1}s`}
                     onClick={() => { this.handleLinkClick(); }}>{val}</MenuItem>)
         });
-
+        const userMenu = ['Logout']
+        const userMenuItems = userMenu.map((val, index) => {
+            return (
+                <UserMenuItem
+                    key={index}
+                    name={menu[index]}
+                    delay={`${index * 0.1}s`} logout={this.props.logout}>{val}</UserMenuItem>
+            )
+        })
         return (
             <>
         {this.state.loading ? <div></div> :
@@ -142,11 +167,11 @@ class MainNavBar extends React.Component {
                         </Link>
                     </div>
                     <div style={styles.user} id="user-container">
-                        <i className="fas fa-user"></i>
-                        <h3 className="user-button">
-                            {this.props.currentUser.first_name}
-                        </h3>
+                        <UserMenuButton currentUser={this.props.currentUser} userOpen={this.state.userMenuOpen} onClick={() => this.handleUserMenuClick()} color='white' />
                     </div>
+                    <UserMenu userOpen={this.state.userMenuOpen}>
+                        {userMenuItems}
+                    </UserMenu>
                 </nav>
             }
             </>
