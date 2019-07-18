@@ -1,5 +1,6 @@
 import React from 'react'
 import Carousel from './carousel'
+import { Link } from 'react-router-dom'
 import ItemsCarousel from 'react-items-carousel'
 import MovieIndexItem from '../movie/movie_index_item'
 import SeriesIndexItem from '../series/series_index_item'
@@ -30,7 +31,9 @@ class Home extends React.Component {
             </div>
             
             <div style={{"maxHeight": "100%", "marginTop": "200px", "marginLeft": "90px" }}>
-                <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>Series</h1>
+                <Link to="/series" className="">
+                    <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>Series</h1>
+                </Link>
                 <ItemsCarousel
                     gutter={12}
                     activePosition={'center'}
@@ -53,7 +56,9 @@ class Home extends React.Component {
                 </ItemsCarousel>
             </div>
             <div style={{ "maxHeight": "100%", "marginTop": "100px", "marginLeft": "90px" }}>
-                <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>Movies</h1>
+                <Link to="/movies">
+                    <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>Movies</h1>
+                </Link>
                 <ItemsCarousel
                     gutter={12}
                     activePosition={'center'}
