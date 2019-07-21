@@ -1,8 +1,5 @@
 import React from 'react'
 import Carousel from './carousel'
-import { Link } from 'react-router-dom'
-import ItemsCarousel from 'react-items-carousel'
-import MovieIndexItem from '../movie/movie_index_item'
 import MiniSlider from './mini-slider/mini-slider'
 
 
