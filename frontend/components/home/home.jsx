@@ -30,11 +30,11 @@ class Home extends React.Component {
                 <Carousel movies={this.props.movies} />
             </div>
             
-            <div style={{"maxHeight": "100%", "marginTop": "200px", "marginLeft": "90px" }}>
-                <Link to="/series" className="">
+                <div style={{ "maxHeight": "100%", "marginTop": "50px", "marginLeft": "90px" }}>
+                <Link to="/series" >
                     <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>Series</h1>
                 </Link>
-                <ItemsCarousel
+                <ItemsCarousel 
                     gutter={12}
                     activePosition={'center'}
                     chevronWidth={50}
@@ -50,16 +50,16 @@ class Home extends React.Component {
                     style={{ "color": "white", "fontSize": "20px" , "display": "flex" }}
                 >
                     {Array.from(series.map((show, i) =>
-                        <SeriesIndexItem show={show} style={{"maxWidth": "379px", "height": 0}}/>
+                        <SeriesIndexItem key={show.title} show={show} style={{"maxWidth": "379px", "height": 0}}/>
                     ))}
                         
                 </ItemsCarousel>
             </div>
-            <div style={{ "maxHeight": "100%", "marginTop": "100px", "marginLeft": "90px" }}>
+                <div style={{ "maxHeight": "100%", "marginTop": "100px", "marginLeft": "90px" }}>
                 <Link to="/movies">
                     <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>Movies</h1>
                 </Link>
-                <ItemsCarousel
+                <ItemsCarousel 
                     gutter={12}
                     activePosition={'center'}
                     chevronWidth={50}
@@ -75,7 +75,7 @@ class Home extends React.Component {
                     style={{ "color": "white", "fontSize": "20px", "display": "flex" }}
                 >
                     {Array.from(movies.map((movie, i) =>
-                        <MovieIndexItem movie={movie} style={{ "maxWidth": "379px", "height": 0 }} />
+                        <MovieIndexItem key={movie.title} movie={movie} style={{ "maxWidth": "379px", "height": 0 }} />
                     ))}
 
                 </ItemsCarousel>
