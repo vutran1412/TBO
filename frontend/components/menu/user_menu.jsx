@@ -19,9 +19,9 @@ class UserMenu extends React.Component {
             userContainer: {
                 position: 'absolute',
                 top: 50,
-                right: -130,
+                right: -400,
                 height: this.state.userOpen ? '2vh' : 0,
-                width: '20vw',
+                width: '30vw',
                 display: 'flex',
                 flexDirection: 'column',
                 justifySelf: 'center',

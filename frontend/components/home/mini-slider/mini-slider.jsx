@@ -14,14 +14,14 @@ class MiniSlider extends React.Component {
         let type = this.props.type
         let content = this.props.content
         return (
-            <div style={{ "maxHeight": "100%", "marginTop": "50px", "marginLeft": "90px" }}>
+            <div style={{ "maxHeight": "100%", "marginTop": "50px", "marginLeft": "105px" }}>
                 <Link to="/series" >
                     <h1 style={{ "color": "azure", "fontSize": "20px", "marginBottom": "20px" }}>{type}</h1>
                 </Link>
                 <ItemsCarousel
                     gutter={12}
                     activePosition={'center'}
-                    chevronWidth={50}
+                    chevronWidth={85}
                     numberOfCards={4}
                     slidesToScroll={2}
                     outsideChevron={false}

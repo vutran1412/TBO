@@ -22,8 +22,8 @@ class Menu extends React.Component {
             container: {
                 position: 'absolute',
                 top: 50,
-                left: 80,
-                height: this.state.open ? '20vh' : 0,
+                left: 120,
+                height: this.state.open ? '25vh' : 0,
                 width: '6vw',
                 display: 'flex',
                 flexDirection: 'column',
