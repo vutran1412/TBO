@@ -1,5 +1,6 @@
 import ItemsCarousel from 'react-items-carousel'
 import SeriesIndexItem from '../../series/series_index_item'
+import MovieIndextItem from '../../movie/movie_index_item'
 import { Link } from 'react-router-dom'
 import React from 'react'
 
@@ -33,8 +34,8 @@ class MiniSlider extends React.Component {
                     leftChevron={'←'}
                     style={{ "color": "white", "fontSize": "20px", "display": "flex" }}
                 >
-                    {Array.from(content.map((show, i) =>
-                        <SeriesIndexItem key={show.title} show={show} style={{ "maxWidth": "379px", "height": 0 }} />
+                    {Array.from(content.map((item, i) =>
+                        type === 'Movies' ? <MovieIndextItem key={item.title} movie={item} style={{ "maxWidth": "379px", "height": 0 }}/> : <SeriesIndexItem key={item.title} show={item} style={{ "maxWidth": "379px", "height": 0 }} />
                     ))}
 
                 </ItemsCarousel>
