@@ -40,7 +40,8 @@ class UserMenuItem extends React.Component {
             },
             userButton: {
                 backgroundColor: 'black',
-                border: 'none'
+                border: 'none',
+                width: '120px'
             }
         }
         return (

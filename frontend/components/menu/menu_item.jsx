@@ -18,8 +18,7 @@ class MenuItem extends React.Component {
             container: {
                 opacity: 0,
                 animation: '1s appear forwards',
-                animationDelay: this.props.delay,
-                alignItems: 'center'
+                animationDelay: this.props.delay
             },
             menuItem: {
                 fontFamily: `'Open Sans', sans-serif`,

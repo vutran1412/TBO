@@ -50,7 +50,7 @@ class UserMenuButton extends React.Component {
             },
             userButton: {
                 color: this.state.hover ? 'azure' : 'white',
-                cursor: this.state.hover ? 'pointer' : 'auto'
+                cursor: this.state.hover ? 'pointer' : 'auto',
             }
         }
         return (
